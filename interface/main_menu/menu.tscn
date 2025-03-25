@@ -1,0 +1,165 @@
+[gd_scene load_steps=8 format=3 uid="uid://dw8ofi7nxl15i"]
+
+[ext_resource type="Script" uid="uid://6mgfh6oxcaft" path="res://interface/main_menu/menu.gd" id="1_by5bo"]
+[ext_resource type="FontFile" uid="uid://yckutb1qe0y1" path="res://Assets/Fonts/expression-pro-v1.1/ExpressionPro.otf" id="1_px8uc"]
+[ext_resource type="Texture2D" uid="uid://bm6d7mp2opgv0" path="res://Assets/backgrounds/castle.png" id="2_4wp4i"]
+[ext_resource type="FontFile" uid="uid://cn5layxo7bvb0" path="res://Assets/Fonts/equipment-pro-v1.1/EquipmentPro.otf" id="2_s80b7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vfgaa"]
+font = ExtResource("1_px8uc")
+font_size = 96
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_koaah"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0j8pw"]
+font = ExtResource("2_s80b7")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_by5bo")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4wp4i")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -204.0
+offset_top = -42.0
+offset_right = 204.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MicroQuest"
+label_settings = SubResource("LabelSettings_vfgaa")
+
+[node name="ButtonsContainers" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -144.0
+offset_right = 148.0
+offset_bottom = -16.0
+grow_vertical = 0
+
+[node name="NovoJogo" type="Button" parent="ButtonsContainers" groups=["button"]]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.898039, 0.898039, 0, 1)
+theme_override_fonts/font = ExtResource("2_s80b7")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_koaah")
+text = "Novo Jogo"
+flat = true
+
+[node name="Shadow" type="Label" parent="ButtonsContainers/NovoJogo"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -14.0
+offset_right = 62.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Novo Jogo"
+label_settings = SubResource("LabelSettings_0j8pw")
+
+[node name="Carregar" type="Button" parent="ButtonsContainers" groups=["button"]]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.898039, 0.898039, 0, 1)
+theme_override_fonts/font = ExtResource("2_s80b7")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_koaah")
+text = "Carregar"
+flat = true
+alignment = 0
+
+[node name="Shadow" type="Label" parent="ButtonsContainers/Carregar"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -14.0
+offset_right = 62.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Carregar"
+label_settings = SubResource("LabelSettings_0j8pw")
+
+[node name="Sair" type="Button" parent="ButtonsContainers" groups=["button"]]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.898039, 0.898039, 0, 1)
+theme_override_fonts/font = ExtResource("2_s80b7")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_koaah")
+text = "Sair"
+flat = true
+alignment = 0
+
+[node name="Shadow" type="Label" parent="ButtonsContainers/Sair"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -14.0
+offset_right = 62.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sair"
+label_settings = SubResource("LabelSettings_0j8pw")
+
+[node name="Version" type="Label" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -140.0
+offset_top = -48.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Versão 1.0"
+label_settings = SubResource("LabelSettings_0j8pw")

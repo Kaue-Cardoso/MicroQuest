@@ -1,0 +1,4 @@
+res://interface/New_Game/New_Game.tscn
+res://interface/New_Game/Class_Selector.gd
+res://Scripts/Global.gd
+res://interface/New_Game/color_rect.gd

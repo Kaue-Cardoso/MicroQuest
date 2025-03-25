@@ -1,0 +1,560 @@
+[gd_scene load_steps=26 format=3 uid="uid://dxftxqmquoqo"]
+
+[ext_resource type="FontFile" uid="uid://cn5layxo7bvb0" path="res://Assets/Fonts/equipment-pro-v1.1/EquipmentPro.otf" id="1_dng5m"]
+[ext_resource type="Texture2D" uid="uid://c1y1ypk2u0304" path="res://Assets/backgrounds/castle_night.png" id="1_olkg1"]
+[ext_resource type="Script" uid="uid://bf64eioyugmq3" path="res://interface/New_Game/Character_Selector.gd" id="1_tmhol"]
+[ext_resource type="Texture2D" uid="uid://crwaws6h6phig" path="res://Assets/Char/Faceset/Knight_faceset.png" id="2_tsrpv"]
+[ext_resource type="Texture2D" uid="uid://cin8lotj1sxst" path="res://Assets/Char/Faceset/Knight_faceset_select.png" id="3_3grly"]
+[ext_resource type="Texture2D" uid="uid://p7dhdvhn4ykx" path="res://Assets/Char/Faceset/Rogue_faceset.png" id="4_bh7o8"]
+[ext_resource type="Texture2D" uid="uid://bvwabgvtm2yqx" path="res://Assets/Char/Faceset/Rogue_faceset_select.png" id="5_0qme6"]
+[ext_resource type="Texture2D" uid="uid://nw52hek2ldwp" path="res://Assets/Char/Faceset/Mage_faceset.png" id="6_6080e"]
+[ext_resource type="Texture2D" uid="uid://dgej0g1t46p7d" path="res://Assets/Char/Faceset/Mage_faceset_select.png" id="7_5v0aa"]
+[ext_resource type="Texture2D" uid="uid://sa8h7r05hsif" path="res://Assets/Char/Faceset/Paladin_faceset.png" id="8_8skh2"]
+[ext_resource type="Texture2D" uid="uid://dn3dn0gnj4yyr" path="res://Assets/Char/Faceset/Paladin_faceset_select.png" id="9_2x1j4"]
+[ext_resource type="Texture2D" uid="uid://c63kvsfgagak0" path="res://Assets/Char/Faceset/Ranger_faceset.png" id="10_cis00"]
+[ext_resource type="Texture2D" uid="uid://cajap1iuq7edo" path="res://Assets/Char/Faceset/Ranger_faceset_select.png" id="11_5sttt"]
+[ext_resource type="Texture2D" uid="uid://begash8bhalvp" path="res://Assets/Char/Faceset/Warlock_faceset.png" id="12_2ijsn"]
+[ext_resource type="Texture2D" uid="uid://chnqvnusxfap0" path="res://Assets/Char/Faceset/Warlock_faceset_select.png" id="13_df3my"]
+[ext_resource type="Script" uid="uid://oo61mii3mq1j" path="res://interface/New_Game/Class_Selector.gd" id="15_dctb4"]
+[ext_resource type="Texture2D" uid="uid://clwasjv1w3vc4" path="res://Assets/Char/Sprite/Undefined.png" id="15_wnhrg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oxqtj"]
+font = ExtResource("1_dng5m")
+font_size = 64
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uin15"]
+font = ExtResource("1_dng5m")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_78npe"]
+line_spacing = 1.0
+font = ExtResource("1_dng5m")
+font_size = 24
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kwx61"]
+font = ExtResource("1_dng5m")
+
+[sub_resource type="LabelSettings" id="LabelSettings_t606p"]
+font = ExtResource("1_dng5m")
+font_size = 32
+
+[sub_resource type="GDScript" id="GDScript_ya76c"]
+script/source = "extends ColorRect
+
+func _draw():
+	var rect = Rect2(Vector2(0, 0), custom_minimum_size)
+	draw_rect(rect, Color(1, 0, 0), false)  # Cor da borda (vermelho)
+	draw_rect(rect, Color(0, 0, 1))  # Preenchimento (azul, por exemplo)
+"
+
+[sub_resource type="LabelSettings" id="LabelSettings_ya76c"]
+font = ExtResource("1_dng5m")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_73ble"]
+font = ExtResource("1_dng5m")
+font_size = 20
+
+[node name="Character_Select" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_tmhol")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_olkg1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin_Header" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Label" type="Label" parent="VBoxContainer/Margin_Header"]
+layout_mode = 2
+text = "Choose your player"
+label_settings = SubResource("LabelSettings_oxqtj")
+horizontal_alignment = 1
+
+[node name="Margin_Content" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="H_Interactive" type="HBoxContainer" parent="VBoxContainer/Margin_Content"]
+layout_mode = 2
+
+[node name="Grid_Sprites" type="GridContainer" parent="VBoxContainer/Margin_Content/H_Interactive"]
+layout_mode = 2
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 3
+
+[node name="Background" type="ColorRect" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="Knight" type="TextureButton" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background/MarginContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_tsrpv")
+texture_hover = ExtResource("3_3grly")
+texture_focused = ExtResource("3_3grly")
+stretch_mode = 0
+
+[node name="Background2" type="ColorRect" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="Rogue" type="TextureButton" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background2/MarginContainer"]
+custom_minimum_size = Vector2(122, 122)
+layout_mode = 2
+texture_normal = ExtResource("4_bh7o8")
+texture_hover = ExtResource("5_0qme6")
+texture_focused = ExtResource("5_0qme6")
+stretch_mode = 0
+
+[node name="Background3" type="ColorRect" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="Mage" type="TextureButton" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background3/MarginContainer"]
+custom_minimum_size = Vector2(122, 122)
+layout_mode = 2
+texture_normal = ExtResource("6_6080e")
+texture_hover = ExtResource("7_5v0aa")
+texture_focused = ExtResource("7_5v0aa")
+stretch_mode = 0
+
+[node name="Background4" type="ColorRect" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="Paladin" type="TextureButton" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background4/MarginContainer"]
+custom_minimum_size = Vector2(122, 122)
+layout_mode = 2
+texture_normal = ExtResource("8_8skh2")
+texture_hover = ExtResource("9_2x1j4")
+texture_focused = ExtResource("9_2x1j4")
+stretch_mode = 0
+
+[node name="Background5" type="ColorRect" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="Ranger" type="TextureButton" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background5/MarginContainer"]
+custom_minimum_size = Vector2(122, 122)
+layout_mode = 2
+texture_normal = ExtResource("10_cis00")
+texture_hover = ExtResource("11_5sttt")
+texture_focused = ExtResource("11_5sttt")
+stretch_mode = 0
+
+[node name="Background6" type="ColorRect" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="Warlock" type="TextureButton" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background6/MarginContainer"]
+custom_minimum_size = Vector2(122, 122)
+layout_mode = 2
+texture_normal = ExtResource("12_2ijsn")
+texture_hover = ExtResource("13_df3my")
+texture_focused = ExtResource("13_df3my")
+stretch_mode = 0
+
+[node name="HContainerValues" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="V_Align" type="VBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="H_Name" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Name"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_dng5m")
+theme_override_font_sizes/font_size = 24
+text = "Nome"
+horizontal_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Name"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/background_color = Color(0, 0, 0, 0)
+theme_override_constants/line_spacing = 1
+theme_override_constants/caret_width = 0
+theme_override_fonts/font = ExtResource("1_dng5m")
+theme_override_font_sizes/font_size = 20
+placeholder_text = "..."
+
+[node name="H_Sprite_Atributes" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="V_Sprite" type="VBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Skeleton" type="Node2D" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite"]
+position = Vector2(120, 112)
+scale = Vector2(2, 2)
+
+[node name="Class" type="Node2D" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton"]
+script = ExtResource("15_dctb4")
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class"]
+texture = ExtResource("15_wnhrg")
+
+[node name="Class" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Class"
+label_settings = SubResource("LabelSettings_uin15")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Atributes_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_dng5m")
+theme_override_font_sizes/font_size = 24
+text = "Atributos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pvs" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+layout_mode = 2
+
+[node name="PVs_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Pvs"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+text = "HP"
+label_settings = SubResource("LabelSettings_78npe")
+
+[node name="PVs_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Pvs"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+label_settings = SubResource("LabelSettings_78npe")
+horizontal_alignment = 2
+
+[node name="PMs" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+layout_mode = 2
+
+[node name="PMs_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/PMs"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+text = "MP"
+label_settings = SubResource("LabelSettings_78npe")
+
+[node name="PMs_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/PMs"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+label_settings = SubResource("LabelSettings_78npe")
+horizontal_alignment = 2
+
+[node name="Corpo" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+layout_mode = 2
+
+[node name="Corpo_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Corpo"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+text = "Body"
+label_settings = SubResource("LabelSettings_78npe")
+
+[node name="Corpo_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Corpo"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+label_settings = SubResource("LabelSettings_78npe")
+horizontal_alignment = 2
+
+[node name="Mente" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+layout_mode = 2
+
+[node name="Mente_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Mente"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+text = "Mind"
+label_settings = SubResource("LabelSettings_78npe")
+
+[node name="Mente_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Mente"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+label_settings = SubResource("LabelSettings_78npe")
+horizontal_alignment = 2
+
+[node name="Espirito" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+layout_mode = 2
+
+[node name="Espirito_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Espirito"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+text = "Spirit"
+label_settings = SubResource("LabelSettings_78npe")
+
+[node name="Espirito_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Espirito"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+label_settings = SubResource("LabelSettings_78npe")
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Type"
+label_settings = SubResource("LabelSettings_kwx61")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Fisico"
+label_settings = SubResource("LabelSettings_t606p")
+horizontal_alignment = 1
+
+[node name="Margin_Footer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Margin_Footer"]
+layout_mode = 2
+color = Color(0.552941, 0.376471, 0.203922, 0.27451)
+script = SubResource("GDScript_ya76c")
+
+[node name="VBoxContainer" type="HBoxContainer" parent="VBoxContainer/Margin_Footer"]
+layout_mode = 2
+
+[node name="V_Itens" type="VBoxContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="M_Equipments_Label" type="MarginContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens/M_Equipments_Label"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_dng5m")
+theme_override_font_sizes/font_size = 28
+text = "Equipments"
+horizontal_alignment = 1
+
+[node name="M_Equipments_Values" type="MarginContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="H_Itens" type="HBoxContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens/M_Equipments_Values"]
+layout_mode = 2
+
+[node name="V_Item" type="VBoxContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens"]
+custom_minimum_size = Vector2(426, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Weapon1" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_ya76c")
+horizontal_alignment = 1
+
+[node name="Weapon2" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_ya76c")
+horizontal_alignment = 1
+
+[node name="Weapon3" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_ya76c")
+horizontal_alignment = 1
+
+[node name="V_Skills" type="VBoxContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="M_Skill_Label" type="MarginContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Skills" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills/M_Skill_Label"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_dng5m")
+theme_override_font_sizes/font_size = 24
+text = "Skills"
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="H_Skills" type="HBoxContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills/MarginContainer2"]
+layout_mode = 2
+
+[node name="V_Skill_Name" type="VBoxContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills/MarginContainer2/H_Skills"]
+custom_minimum_size = Vector2(142, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Skill1" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_73ble")
+
+[node name="Skill2" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_73ble")
+
+[node name="Skill3" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_73ble")
+
+[connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background/MarginContainer/Knight" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_knight_pressed"]
+[connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background2/MarginContainer/Rogue" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_rogue_pressed"]
+[connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background3/MarginContainer/Mage" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_mage_pressed"]
