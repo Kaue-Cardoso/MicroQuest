@@ -66,8 +66,8 @@ grow_vertical = 0
 
 [node name="NovoJogo" type="Button" parent="ButtonsContainers" groups=["button"]]
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.898039, 0.898039, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_s80b7")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_koaah")
@@ -93,8 +93,8 @@ label_settings = SubResource("LabelSettings_0j8pw")
 
 [node name="Carregar" type="Button" parent="ButtonsContainers" groups=["button"]]
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.898039, 0.898039, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_s80b7")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_koaah")
@@ -121,8 +121,8 @@ label_settings = SubResource("LabelSettings_0j8pw")
 
 [node name="Sair" type="Button" parent="ButtonsContainers" groups=["button"]]
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.898039, 0.898039, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_s80b7")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_koaah")

@@ -29,19 +29,19 @@ shadow_offset = Vector2(0, 2)
 font = ExtResource("1_dng5m")
 font_size = 32
 
-[sub_resource type="LabelSettings" id="LabelSettings_78npe"]
-line_spacing = 1.0
-font = ExtResource("1_dng5m")
-font_size = 24
-shadow_color = Color(0, 0, 0, 1)
-shadow_offset = Vector2(0, 2)
-
 [sub_resource type="LabelSettings" id="LabelSettings_kwx61"]
 font = ExtResource("1_dng5m")
 
 [sub_resource type="LabelSettings" id="LabelSettings_t606p"]
 font = ExtResource("1_dng5m")
 font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_78npe"]
+line_spacing = 1.0
+font = ExtResource("1_dng5m")
+font_size = 24
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 2)
 
 [sub_resource type="GDScript" id="GDScript_ya76c"]
 script/source = "extends ColorRect
@@ -104,15 +104,16 @@ horizontal_alignment = 1
 [node name="Margin_Content" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
+theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 30
+theme_override_constants/margin_bottom = 10
 
 [node name="H_Interactive" type="HBoxContainer" parent="VBoxContainer/Margin_Content"]
 layout_mode = 2
 
 [node name="Grid_Sprites" type="GridContainer" parent="VBoxContainer/Margin_Content/H_Interactive"]
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_constants/h_separation = 6
 theme_override_constants/v_separation = 6
 columns = 3
@@ -254,7 +255,7 @@ theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 2
 theme_override_constants/margin_bottom = 2
 
-[node name="Warlock" type="TextureButton" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background6/MarginContainer"]
+[node name="Bard" type="TextureButton" parent="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background6/MarginContainer"]
 custom_minimum_size = Vector2(122, 122)
 layout_mode = 2
 texture_normal = ExtResource("12_2ijsn")
@@ -301,7 +302,7 @@ size_flags_horizontal = 3
 alignment = 2
 
 [node name="Skeleton" type="Node2D" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite"]
-position = Vector2(120, 112)
+position = Vector2(119, 77)
 scale = Vector2(2, 2)
 
 [node name="Class" type="Node2D" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton"]
@@ -310,11 +311,29 @@ script = ExtResource("15_dctb4")
 [node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class"]
 texture = ExtResource("15_wnhrg")
 
-[node name="Class" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/MarginContainer"]
+layout_mode = 2
+
+[node name="Class" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 text = "Class"
 label_settings = SubResource("LabelSettings_uin15")
+horizontal_alignment = 1
+
+[node name="Type_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Type"
+label_settings = SubResource("LabelSettings_kwx61")
+horizontal_alignment = 1
+
+[node name="Type_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Fisico"
+label_settings = SubResource("LabelSettings_t606p")
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes"]
@@ -373,40 +392,19 @@ theme_override_font_sizes/font_size = 24
 label_settings = SubResource("LabelSettings_78npe")
 horizontal_alignment = 2
 
-[node name="Corpo" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+[node name="Forca" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
 layout_mode = 2
 
-[node name="Corpo_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Corpo"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_y = 2
-theme_override_font_sizes/font_size = 24
-text = "Body"
-label_settings = SubResource("LabelSettings_78npe")
-
-[node name="Corpo_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Corpo"]
+[node name="Forca_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Forca"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 2
 theme_override_font_sizes/font_size = 24
-label_settings = SubResource("LabelSettings_78npe")
-horizontal_alignment = 2
-
-[node name="Mente" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
-layout_mode = 2
-
-[node name="Mente_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Mente"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_y = 2
-theme_override_font_sizes/font_size = 24
-text = "Mind"
+text = "Forca"
 label_settings = SubResource("LabelSettings_78npe")
 
-[node name="Mente_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Mente"]
+[node name="Forca_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Forca"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -415,19 +413,19 @@ theme_override_font_sizes/font_size = 24
 label_settings = SubResource("LabelSettings_78npe")
 horizontal_alignment = 2
 
-[node name="Espirito" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+[node name="Destreza" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
 layout_mode = 2
 
-[node name="Espirito_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Espirito"]
+[node name="Destreza_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Destreza"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 2
 theme_override_font_sizes/font_size = 24
-text = "Spirit"
+text = "Destreza"
 label_settings = SubResource("LabelSettings_78npe")
 
-[node name="Espirito_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Espirito"]
+[node name="Destreza_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Destreza"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -436,125 +434,201 @@ theme_override_font_sizes/font_size = 24
 label_settings = SubResource("LabelSettings_78npe")
 horizontal_alignment = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+[node name="Constituicao" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/MarginContainer"]
+[node name="Constituicao_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Constituicao"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+text = "Constituição"
+label_settings = SubResource("LabelSettings_78npe")
+
+[node name="Constituicao_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Constituicao"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+label_settings = SubResource("LabelSettings_78npe")
+horizontal_alignment = 2
+
+[node name="Inteligencia" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Inteligencia_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Inteligencia"]
 layout_mode = 2
-text = "Type"
-label_settings = SubResource("LabelSettings_kwx61")
-horizontal_alignment = 1
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+text = "Inteligencia"
+label_settings = SubResource("LabelSettings_78npe")
 
-[node name="Label2" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Inteligencia_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Inteligencia"]
 layout_mode = 2
-text = "Fisico"
-label_settings = SubResource("LabelSettings_t606p")
-horizontal_alignment = 1
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+label_settings = SubResource("LabelSettings_78npe")
+horizontal_alignment = 2
+
+[node name="Carisma" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+layout_mode = 2
+
+[node name="Carisma_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Carisma"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+text = "Carisma"
+label_settings = SubResource("LabelSettings_78npe")
+
+[node name="Carisma_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Carisma"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+label_settings = SubResource("LabelSettings_78npe")
+horizontal_alignment = 2
 
 [node name="Margin_Footer" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 30
+theme_override_constants/margin_bottom = 20
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Margin_Footer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Margin_Footer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Margin_Footer/MarginContainer"]
 layout_mode = 2
 color = Color(0.552941, 0.376471, 0.203922, 0.27451)
 script = SubResource("GDScript_ya76c")
 
-[node name="VBoxContainer" type="HBoxContainer" parent="VBoxContainer/Margin_Footer"]
+[node name="VBoxContainer" type="HBoxContainer" parent="VBoxContainer/Margin_Footer/MarginContainer"]
 layout_mode = 2
 
-[node name="V_Itens" type="VBoxContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer"]
+[node name="V_Itens" type="VBoxContainer" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="M_Equipments_Label" type="MarginContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens"]
+[node name="M_Equipments_Label" type="MarginContainer" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens"]
 layout_mode = 2
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Label" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens/M_Equipments_Label"]
+[node name="Label" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Label"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_dng5m")
 theme_override_font_sizes/font_size = 28
 text = "Equipments"
 horizontal_alignment = 1
 
-[node name="M_Equipments_Values" type="MarginContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens"]
+[node name="M_Equipments_Values" type="MarginContainer" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="H_Itens" type="HBoxContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens/M_Equipments_Values"]
+[node name="H_Itens" type="HBoxContainer" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values"]
 layout_mode = 2
 
-[node name="V_Item" type="VBoxContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens"]
+[node name="V_Item" type="VBoxContainer" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens"]
 custom_minimum_size = Vector2(426, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Weapon1" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
+[node name="Weapon1" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_ya76c")
 horizontal_alignment = 1
 
-[node name="Weapon2" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
+[node name="Weapon2" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_ya76c")
 horizontal_alignment = 1
 
-[node name="Weapon3" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
+[node name="Weapon3" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_ya76c")
 horizontal_alignment = 1
 
-[node name="V_Skills" type="VBoxContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer"]
+[node name="V_Skills" type="VBoxContainer" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="M_Skill_Label" type="MarginContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills"]
+[node name="M_Skill_Label" type="MarginContainer" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills"]
 layout_mode = 2
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Skills" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills/M_Skill_Label"]
+[node name="Skills" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/M_Skill_Label"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_dng5m")
 theme_override_font_sizes/font_size = 24
 text = "Skills"
 horizontal_alignment = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills"]
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="H_Skills" type="HBoxContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills/MarginContainer2"]
+[node name="H_Skills" type="HBoxContainer" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2"]
 layout_mode = 2
 
-[node name="V_Skill_Name" type="VBoxContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills/MarginContainer2/H_Skills"]
+[node name="V_Skill_Name" type="VBoxContainer" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills"]
 custom_minimum_size = Vector2(142, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Skill1" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
+[node name="Skill1" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_73ble")
+horizontal_alignment = 1
 
-[node name="Skill2" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
+[node name="Skill2" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_73ble")
+horizontal_alignment = 1
 
-[node name="Skill3" type="Label" parent="VBoxContainer/Margin_Footer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
+[node name="Skill3" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_73ble")
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/Margin_Footer"]
+layout_mode = 2
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 700
+alignment = 1
+
+[node name="Back" type="Button" parent="VBoxContainer/Margin_Footer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Voltar"
+
+[node name="Confirm" type="Button" parent="VBoxContainer/Margin_Footer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Confirmar"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background/MarginContainer/Knight" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_knight_pressed"]
 [connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background2/MarginContainer/Rogue" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_rogue_pressed"]
 [connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background3/MarginContainer/Mage" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_mage_pressed"]
+[connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background4/MarginContainer/Paladin" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_paladin_pressed"]
+[connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background5/MarginContainer/Ranger" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_ranger_pressed"]
+[connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background6/MarginContainer/Bard" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_bard_pressed"]
+[connection signal="pressed" from="VBoxContainer/Margin_Footer/VBoxContainer2/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/Margin_Footer/VBoxContainer2/HBoxContainer/Confirm" to="." method="_on_confirm_pressed"]

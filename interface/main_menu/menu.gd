@@ -4,6 +4,8 @@ class_name MainMenu
 var _has_save: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	MusicController.play_music()
+	
 	if _has_save == false:
 		$ButtonsContainers/Carregar.disabled = true
 		$ButtonsContainers/Carregar/Shadow.hide()

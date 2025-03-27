@@ -1,0 +1,97 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjb3hyh5q2pf7"]
+
+[ext_resource type="Texture2D" uid="uid://cin8lotj1sxst" path="res://Assets/Char/Faceset/Knight_faceset_select.png" id="1_h5kx1"]
+[ext_resource type="Script" uid="uid://dammvltra23y4" path="res://Resources/Dialog/dialog.gd" id="1_ki6pi"]
+[ext_resource type="FontFile" uid="uid://cn5layxo7bvb0" path="res://Assets/Fonts/equipment-pro-v1.1/EquipmentPro.otf" id="2_hv7cq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ki6pi"]
+line_spacing = 0.0
+font = ExtResource("2_hv7cq")
+font_size = 38
+shadow_color = Color(0, 0, 0, 0.6)
+
+[node name="Dialog_Screen" type="Control" node_paths=PackedStringArray("_name", "_dialog", "_faceset")]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -100.0
+offset_right = 160.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+script = ExtResource("1_ki6pi")
+_name = NodePath("HContainer/VContainer/Name")
+_dialog = NodePath("HContainer/VContainer/Dialog")
+_faceset = NodePath("HContainer/Border/Faceset")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.341176)
+
+[node name="HContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = -36.0
+offset_right = 156.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Border" type="ColorRect" parent="HContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Faceset" type="TextureRect" parent="HContainer/Border"]
+custom_minimum_size = Vector2(200, 194)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -36.0
+offset_right = 35.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_h5kx1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VContainer" type="VBoxContainer" parent="HContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="HContainer/VContainer"]
+layout_mode = 2
+text = "Nome Do NPC"
+label_settings = SubResource("LabelSettings_ki6pi")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Dialog" type="RichTextLabel" parent="HContainer/VContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_offset_x = 1
+theme_override_fonts/normal_font = ExtResource("2_hv7cq")
+text = "Teste Teste Teste"

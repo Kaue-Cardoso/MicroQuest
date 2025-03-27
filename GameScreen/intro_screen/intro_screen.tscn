@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dby0o103s23t5"]
+
+[ext_resource type="Script" uid="uid://rtuxrcj3atsx" path="res://GameScreen/intro_screen/intro_screen.gd" id="1_8yf1u"]
+
+[node name="intro_screen" type="Node2D" node_paths=PackedStringArray("_hud")]
+script = ExtResource("1_8yf1u")
+_hud = NodePath("HUD")
+
+[node name="HUD" type="CanvasLayer" parent="."]
