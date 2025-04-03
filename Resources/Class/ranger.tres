@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ClassData" load_steps=3 format=3 uid="uid://dr4p31jr4a0v1"]
+
+[ext_resource type="Script" uid="uid://cffkcxo1owqd8" path="res://Resources/Class/class.gd" id="1_k8ubi"]
+[ext_resource type="Texture2D" uid="uid://dtuycjlfv04pr" path="res://Assets/Char/Sprite/Ranger.png" id="2_bsrna"]
+
+[resource]
+script = ExtResource("1_k8ubi")
+nome_classe = "Patrulheiro"
+tipo = "Fisico"
+sprite = ExtResource("2_bsrna")
+pvs = 10
+pms = 6
+forca = 1
+destreza = 3
+constituicao = 2
+inteligencia = 1
+carisma = 3
+metadata/_custom_type_script = "uid://cffkcxo1owqd8"

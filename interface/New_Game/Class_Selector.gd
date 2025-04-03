@@ -10,118 +10,120 @@ extends Node2D
 @onready var constituicao_value = $"../../../VBoxContainer/Constituicao/Constituicao_Value"
 @onready var inteligencia_value = $"../../../VBoxContainer/Inteligencia/Inteligencia_Value"
 @onready var carisma_value = $"../../../VBoxContainer/Carisma/Carisma_Value"
-@onready var weapon1_name = $"../../../../../../../../Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item/Weapon1"
-@onready var weapon2_name = $"../../../../../../../../Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item/Weapon2"
-@onready var weapon3_name = $"../../../../../../../../Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item/Weapon3"
-@onready var skill1_name = $"../../../../../../../../Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name/Skill1"
-@onready var skill2_name = $"../../../../../../../../Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name/Skill2"
-@onready var skill3_name = $"../../../../../../../../Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name/Skill3"
+@onready var weapon1_name = $"../../../../../../../../Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item/Weapon1_Name"
+@onready var weapon1_desc = $"../../../../../../../../Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item/Weapon1_Desc"
+@onready var weapon2_name = $"../../../../../../../../Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item/Weapon2_Name"
+@onready var weapon2_desc = $"../../../../../../../../Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item/Weapon2_Desc"
+@onready var skill1_name = $"../../../../../../../../Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name/Skill1_name"
+@onready var skill1_desc = $"../../../../../../../../Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name/Skill1_desc"
+@onready var skill2_name = $"../../../../../../../../Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name/Skill2_name"
+@onready var skill2_desc = $"../../../../../../../../Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name/Skill2_desc"
+@onready var test = $"../../../../../../../../Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item/test"
 
-var class_keys = []
-var current_class = "Undefined"
+var current_class = " "
+var current_weapon = " "
+var current_skill = " "
 
 func _ready():
-	print("Tudo Ok")
 	weapon1_name.text = "Nenhuma arma equipada"
 	skill1_name.text = "Sem Habilidades"
-	
-func set_sprite_keys():
-	class_keys = Global.class_collection.keys()
-	
-# Botões de seleção de personagens
+
 func _on_knight_pressed():
 	current_class = "Knight"
-	update_character(current_class)
+	current_weapon = ["Sword"] as Array[String]
+	current_skill = null
+	update_character(current_class,current_weapon)
 
 func _on_rogue_pressed():
 	current_class = "Rogue"
-	update_character(current_class)
+	current_weapon = ["Dagger"] as Array[String]
+	current_skill = ["Lucky", "Foul_Play"]
+	update_character(current_class,current_weapon)
 
 func _on_mage_pressed():
 	current_class = "Mage"
-	update_character(current_class)
+	current_weapon = ["Staff"] as Array[String]
+	current_skill = ["Fireball"]
+	update_character(current_class,current_weapon)
 
-func _on_paladin_pressed() -> void:
+func _on_paladin_pressed():
 	current_class = "Paladin"
-	update_character(current_class)
+	current_weapon = ["Hammer"] as Array[String]
+	current_skill = ["Heal"]
+	update_character(current_class,current_weapon)
 
-func _on_ranger_pressed() -> void:
+func _on_ranger_pressed():
 	current_class = "Ranger"
-	update_character(current_class)
+	current_weapon = ["Bow"] as Array[String]
+	current_skill = ["Escape"]
+	update_character(current_class,current_weapon)
 
-func _on_bard_pressed() -> void:
+func _on_bard_pressed():
 	current_class = "Bard"
-	update_character(current_class)
+	current_weapon = ["Lute"] as Array[String]
+	current_skill = ["Lucky", "Sing"]
+	update_character(current_class,current_weapon)
 
 #  ################## Funções para exibir valores Char ###########################
 
-func update_character(current_class):
-	update_display_sprite(current_class)
+func update_character(current_class, current_weapon):
 	update_display_atributes(current_class)
-	update_display_weapons(current_class)
-	update_display_skill(current_class)
-
-func update_display_sprite(current_class):
-	# Atualiza o sprite
-	class_sprite.texture = Global.class_collection[current_class]
+	update_display_weapons(current_weapon)
+	#update_display_skill(current_class)
 
 func update_display_atributes(current_class):
 	# Atualiza os atributos na interface
-	Global.selected_values = Global.class_atributes[current_class]
-	class_label.text = str(Global.selected_values["Nome_class"])
-	type_value.text = str(Global.selected_values["Tipo"])
-	pv_value.text = str(Global.selected_values["Pvs"])
-	pm_value.text = str(Global.selected_values["Pms"])
-	forca_value.text = str(Global.selected_values["Forca"])
-	destreza_value.text = str(Global.selected_values["Destreza"])
-	constituicao_value.text = str(Global.selected_values["Constituicao"])
-	inteligencia_value.text = str(Global.selected_values["Inteligencia"])
-	carisma_value.text = str(Global.selected_values["Carisma"])
+	var atributes_data: ClassData
+	atributes_data = load("res://Resources/Class/"+ current_class + ".tres") as ClassData
+	if atributes_data:
+		class_sprite.texture = atributes_data.sprite
+		class_label.text = atributes_data.nome_classe
+		type_value.text = atributes_data.tipo
+		pv_value.text = str(atributes_data.pvs)
+		pm_value.text = str(atributes_data.pms)
+		forca_value.text = str(atributes_data.forca)
+		destreza_value.text = str(atributes_data.destreza)
+		constituicao_value.text = str(atributes_data.constituicao)
+		inteligencia_value.text = str(atributes_data.inteligencia)
+		carisma_value.text = str(atributes_data.carisma)
+	
+	
+func update_display_weapons(current_weapon: Array[String]):
+	# Referências aos labels
+	var weapon_labels = [weapon1_name, weapon2_name]
+	var desc_labels = [weapon1_desc, weapon2_desc]
 
-func update_display_weapons(current_class):
-	# Define os valores padrão para as labels de armas
-	weapon1_name.text = "Nenhuma arma equipada"  # Exibe essa mensagem caso a classe não tenha armas
-	weapon2_name.text = ""  # Esvazia os campos das outras armas
-	weapon3_name.text = ""	
-	# Verifica se a classe tem armas associadas no dicionário Global.class_weapons
-	if Global.class_weapons.has(current_class):
-		var weapon_list = Global.class_weapons[current_class]  # Obtém a lista de armas da classe
-		# Percorre a lista de armas usando um loop baseado no tamanho da lista
-		for i in range(weapon_list.size()):
-			var weapon_name = weapon_list[i]  # Obtém o nome da arma pelo índice atual
-			# Verifica se essa arma está registrada no dicionário Global.weapons
-			if Global.weapons.has(weapon_name):
-				var weapon_data = Global.weapons[weapon_name]  # Obtém os dados da arma
-				# Exibe as informações da arma no console (debug)
-				print("Arma:", weapon_data["Nome"], "- Dano:", weapon_data["Dano"], "- Descrição:", weapon_data["Descrição"])
-				# Monta dinamicamente o nome da variável correspondente ao slot da arma
-				var weapon_label_name = "weapon" + str(i + 1) + "_name"  # Exemplo: weapon1_name, weapon2_name, weapon3_name
-				# Usa 'get()' para acessar a variável pelo nome dinâmico
-				var weapon_label = get(weapon_label_name)
-				# Verifica se conseguiu encontrar a variável antes de alterar seu texto
-				if weapon_label:
-					weapon_label.text = str(weapon_data["Nome"])  # Atualiza o nome da arma na interface
+	# Limpa as labels antes de exibir
+	for i in range(weapon_labels.size()):
+		weapon_labels[i].text = "Nenhuma arma equipada" if i == 0 else ""
+		desc_labels[i].text = ""
 
-func update_display_skill(current_class):
-	# Define os valores padrão para as labels de armas
-	skill1_name.text = "Sem Habilidades"  # Exibe essa mensagem caso a classe não tenha armas
-	skill2_name.text = ""  # Esvazia os campos das outras armas
-	skill3_name.text = ""
-	# Verifica se a classe tem armas associadas no dicionário Global.class_weapons
-	if Global.class_skills.has(current_class):
-		var skills_list = Global.class_skills[current_class]  # Obtém a lista de armas da classe
-		# Percorre a lista de armas usando um loop baseado no tamanho da lista
-		for i in range(skills_list.size()):
-			var skill_name = skills_list[i]  # Obtém o nome da arma pelo índice atual
-			# Verifica se essa arma está registrada no dicionário Global.weapons
-			if Global.skills.has(skill_name):
-				var skill_data = Global.skills[skill_name]  # Obtém os dados da arma
-				# Exibe as informações da arma no console (debug)
-				print("Skill:", skill_data["Nome"], "- Dano:", skill_data["Dano"], "- Descrição:", skill_data["Descrição"])
-				# Monta dinamicamente o nome da variável correspondente ao slot da arma
-				var skill_label_name = "skill" + str(i + 1) + "_name"  # Exemplo: weapon1_name, weapon2_name, weapon3_name
-				# Usa 'get()' para acessar a variável pelo nome dinâmico
-				var skill_label = get(skill_label_name)
-				# Verifica se conseguiu encontrar a variável antes de alterar seu texto
-				if skill_label:
-					skill_label.text = str(skill_data["Nome"])  # Atualiza o nome da arma na interface
+	# Preenche com os dados das armas equipadas
+	for i in range(min(current_weapon.size(), weapon_labels.size())):
+		var weapon_path = "res://Resources/Weapons/%s/%s_basic.tres" % [current_weapon[i], current_weapon[i]]
+		var weapon_data: WeaponData = load(weapon_path) as WeaponData
+			
+		if weapon_data:
+			weapon_labels[i].text = weapon_data.name
+			desc_labels[i].text = weapon_data.description
+			print(weapon_data.damage)
+			print(weapon_data.type)
+			print(weapon_data.type_combat)
+		else:
+			printerr("Erro ao carregar resource de arma:", weapon_path)
+			weapon_labels[i].text = "Erro ao carregar"
+			desc_labels[i].text = ""
+	
+func update_display_skill(current_skill):
+	var skill_labels = [skill1_name, skill2_name]
+	var desc_labels = [skill1_desc, skill2_desc]
+	
+	# Limpa as labels antes de exibir
+	for i in range(skill_labels.size()):
+		skill_labels[i].text = "Nenhuma Habilidade Aprendida" if i == 0 else ""
+		desc_labels[i].text = ""
+		
+	# Preenche com os dados das armas equipadas
+	for i in range(min(current_skill.size(), skill_labels.size())):
+		var skill_path = "res://Resources/Skill/%s.tres" % [current_skill[i]]
+		var skill_data: SkillData = load(skill_path) as SkillData

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SwordData" load_steps=2 format=3 uid="uid://bdjn7uaphppjn"]
+
+[ext_resource type="Script" uid="uid://bvejxssqf8a8r" path="res://Resources/Weapons/Sword/sword_data.gd" id="1_u8ak7"]
+
+[resource]
+script = ExtResource("1_u8ak7")
+name = "Espada"
+type = ""
+type_damage = ""
+type_combat = ""
+damage = 3
+description = "Espada Basica"
+metadata/_custom_type_script = "uid://bvejxssqf8a8r"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HammerData" load_steps=2 format=3 uid="uid://cuqara3r1lf38"]
+
+[ext_resource type="Script" uid="uid://dx02ck371icbg" path="res://Resources/Weapons/Hammer/hammer_data.gd" id="1_kjc8g"]
+
+[resource]
+script = ExtResource("1_kjc8g")
+type = "Hammer"
+type_damage = "Contusão"
+type_combat = "Fight"
+name = "Martelo"
+damage = 3
+description = "Otimo para lutar e marcenaria"
+metadata/_custom_type_script = "uid://dx02ck371icbg"

@@ -1,10 +1,5 @@
-res://interface/main_menu/menu.tscn
-res://Resources/Player/Player.tscn
-res://Resources/Dialog/Dialog.tscn
-res://GameScreen/intro_screen/intro_screen.tscn
 res://interface/New_Game/New_Game.tscn
-res://Resources/Music/music_controller.tscn
 res://Scripts Globais/music_controller.gd
-res://interface/main_menu/menu.gd
-res://GameScreen/intro_screen/intro_screen.gd
-res://Scripts Globais/Missions.gd
+res://Resources/Music/music_controller.tscn
+res://interface/New_Game/Class_Selector.gd
+res://Resources/Skill/skill_data.gd

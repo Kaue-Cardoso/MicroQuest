@@ -2,7 +2,7 @@ extends Node
 
 # Estrutura das missões
 var missions = {
-	"Arendal": [
+	"Valoria": [
 		{
 		"id": "01", 
 		"title": "Goblins Ladrões", 
@@ -26,7 +26,7 @@ var missions = {
 		"Boss": "Nothing"
 		}
 	],
-	"Najir": [
+	"Aquoris": [
 		{
 		"id": "01", 
 		"title": "Goblins Ladrões", 
@@ -50,7 +50,7 @@ var missions = {
 		"Boss": "Nothing"
 		}
 	],
-	"Durant": [
+	"Aethelis": [
 		{
 		"id": "01", 
 		"title": "Goblins Ladrões", 

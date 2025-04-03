@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ClassData" load_steps=3 format=3 uid="uid://45sgpjcfho5n"]
+
+[ext_resource type="Script" uid="uid://cffkcxo1owqd8" path="res://Resources/Class/class.gd" id="1_iwd0v"]
+[ext_resource type="Texture2D" uid="uid://bfcqbuy4m1k2j" path="res://Assets/Char/Sprite/Paladin.png" id="2_nc43o"]
+
+[resource]
+script = ExtResource("1_iwd0v")
+nome_classe = "Paladino"
+tipo = "Misto"
+sprite = ExtResource("2_nc43o")
+pvs = 14
+pms = 8
+forca = 2
+destreza = 1
+constituicao = 4
+inteligencia = 2
+carisma = 1
+metadata/_custom_type_script = "uid://cffkcxo1owqd8"

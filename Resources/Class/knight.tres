@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ClassData" load_steps=3 format=3 uid="uid://1vbbt5w12vdd"]
+
+[ext_resource type="Script" uid="uid://cffkcxo1owqd8" path="res://Resources/Class/class.gd" id="1_r8vkr"]
+[ext_resource type="Texture2D" uid="uid://btd5asj5ow6lo" path="res://Assets/Char/Sprite/Knight.png" id="2_0jyqe"]
+
+[resource]
+script = ExtResource("1_r8vkr")
+nome_classe = "Cavaleiro"
+tipo = "Fisico"
+sprite = ExtResource("2_0jyqe")
+pvs = 12
+pms = 6
+forca = 3
+destreza = 2
+constituicao = 3
+inteligencia = 1
+carisma = 1
+metadata/_custom_type_script = "uid://cffkcxo1owqd8"

@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*res://Scripts Globais/Global.gd"
 MusicController="*res://Resources/Music/music_controller.tscn"
+Missions="*res://Scripts Globais/Missions.gd"
 
 [display]
 

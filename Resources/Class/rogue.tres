@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ClassData" load_steps=3 format=3 uid="uid://dab0hxustkmrm"]
+
+[ext_resource type="Script" uid="uid://cffkcxo1owqd8" path="res://Resources/Class/class.gd" id="1_asq1a"]
+[ext_resource type="Texture2D" uid="uid://b4lo8dk8aihdm" path="res://Assets/Char/Sprite/Rogue.png" id="2_oaj6q"]
+
+[resource]
+script = ExtResource("1_asq1a")
+nome_classe = "Ladino"
+tipo = "Fisico"
+sprite = ExtResource("2_oaj6q")
+pvs = 8
+pms = 6
+forca = 2
+destreza = 5
+constituicao = 1
+inteligencia = 1
+carisma = 1
+metadata/_custom_type_script = "uid://cffkcxo1owqd8"

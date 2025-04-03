@@ -1,8 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://dxftxqmquoqo"]
+[gd_scene load_steps=28 format=3 uid="uid://dxftxqmquoqo"]
 
 [ext_resource type="FontFile" uid="uid://cn5layxo7bvb0" path="res://Assets/Fonts/equipment-pro-v1.1/EquipmentPro.otf" id="1_dng5m"]
 [ext_resource type="Texture2D" uid="uid://c1y1ypk2u0304" path="res://Assets/backgrounds/castle_night.png" id="1_olkg1"]
-[ext_resource type="Script" uid="uid://bf64eioyugmq3" path="res://interface/New_Game/Character_Selector.gd" id="1_tmhol"]
+[ext_resource type="Script" uid="uid://5lep84ifawma" path="res://interface/New_Game/new_game.gd" id="1_ya76c"]
 [ext_resource type="Texture2D" uid="uid://crwaws6h6phig" path="res://Assets/Char/Faceset/Knight_faceset.png" id="2_tsrpv"]
 [ext_resource type="Texture2D" uid="uid://cin8lotj1sxst" path="res://Assets/Char/Faceset/Knight_faceset_select.png" id="3_3grly"]
 [ext_resource type="Texture2D" uid="uid://p7dhdvhn4ykx" path="res://Assets/Char/Faceset/Rogue_faceset.png" id="4_bh7o8"]
@@ -52,7 +52,15 @@ func _draw():
 	draw_rect(rect, Color(0, 0, 1))  # Preenchimento (azul, por exemplo)
 "
 
+[sub_resource type="LabelSettings" id="LabelSettings_o16km"]
+font = ExtResource("1_dng5m")
+font_size = 24
+
 [sub_resource type="LabelSettings" id="LabelSettings_ya76c"]
+font = ExtResource("1_dng5m")
+font_size = 18
+
+[sub_resource type="LabelSettings" id="LabelSettings_rd7d0"]
 font = ExtResource("1_dng5m")
 font_size = 24
 
@@ -69,7 +77,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_tmhol")
+script = ExtResource("1_ya76c")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -545,17 +553,22 @@ custom_minimum_size = Vector2(426, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Weapon1" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
+[node name="Weapon1_Name" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_o16km")
+horizontal_alignment = 1
+
+[node name="Weapon1_Desc" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_ya76c")
 horizontal_alignment = 1
 
-[node name="Weapon2" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
+[node name="Weapon2_Name" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
 layout_mode = 2
-label_settings = SubResource("LabelSettings_ya76c")
+label_settings = SubResource("LabelSettings_rd7d0")
 horizontal_alignment = 1
 
-[node name="Weapon3" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
+[node name="Weapon2_Desc" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Values/H_Itens/V_Item"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_ya76c")
 horizontal_alignment = 1
@@ -590,17 +603,22 @@ custom_minimum_size = Vector2(142, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Skill1" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
+[node name="Skill1_name" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_73ble")
 horizontal_alignment = 1
 
-[node name="Skill2" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
+[node name="Skill1_desc" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_73ble")
 horizontal_alignment = 1
 
-[node name="Skill3" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
+[node name="Skill2_name" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_73ble")
+horizontal_alignment = 1
+
+[node name="Skill2_desc" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_73ble")
 horizontal_alignment = 1
@@ -630,5 +648,6 @@ text = "Confirmar"
 [connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background4/MarginContainer/Paladin" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_paladin_pressed"]
 [connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background5/MarginContainer/Ranger" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_ranger_pressed"]
 [connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background6/MarginContainer/Bard" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_bard_pressed"]
+[connection signal="text_changed" from="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Name/TextEdit" to="." method="_on_text_edit_text_changed"]
 [connection signal="pressed" from="VBoxContainer/Margin_Footer/VBoxContainer2/HBoxContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="VBoxContainer/Margin_Footer/VBoxContainer2/HBoxContainer/Confirm" to="." method="_on_confirm_pressed"]

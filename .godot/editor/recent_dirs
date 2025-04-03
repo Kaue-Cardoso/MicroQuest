@@ -1,8 +1,13 @@
+res://Resources/Weapons/Hammer
+res://Resources/Weapons/Sword
+res://Resources/Class
+res://Resources/Weapons
 res://Scripts Globais
+res://interface/New_Game
+res://GameScreen/Game_Screen
 res://Resources/Music
 res://GameScreen/intro_screen
 res://Resources/Dialog
-res://interface/New_Game
 res://GameScreen
 res://Assets/Fonts/equipment-pro-v1.1
 res://interface/Loaded_Game
