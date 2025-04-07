@@ -4,10 +4,10 @@
 
 [resource]
 script = ExtResource("1_u8ak7")
+type = "Sword"
+type_damage = "Corte"
+type_combat = "Fight"
 name = "Espada"
-type = ""
-type_damage = ""
-type_combat = ""
 damage = 3
 description = "Espada Basica"
 metadata/_custom_type_script = "uid://bvejxssqf8a8r"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DaggerData" load_steps=2 format=3 uid="uid://2lc6nr57xnqo"]
+
+[ext_resource type="Script" uid="uid://bwyuaf26b7dai" path="res://Resources/Weapons/Dagger/dagger_data.gd" id="1_40foq"]
+
+[resource]
+script = ExtResource("1_40foq")
+type = "Dagger"
+type_damage = "Perfuração"
+type_combat = "Fight"
+name = "Adaga Safada"
+damage = 1
+description = "Escalpela o safados"
+metadata/_custom_type_script = "uid://bwyuaf26b7dai"

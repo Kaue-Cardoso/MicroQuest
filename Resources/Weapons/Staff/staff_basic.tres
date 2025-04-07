@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StaffData" load_steps=2 format=3 uid="uid://tcflrujr7eo1"]
+
+[ext_resource type="Script" uid="uid://digem580b61ha" path="res://Resources/Weapons/Staff/staff_data.gd" id="1_n7jii"]
+
+[resource]
+script = ExtResource("1_n7jii")
+type = "Staff"
+type_damage = "Magico"
+type_combat = "Distance"
+name = "Cajado do Mago"
+damage = 2
+description = "Um belo porrete e conjurador"
+metadata/_custom_type_script = "uid://digem580b61ha"

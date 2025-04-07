@@ -1,5 +1,12 @@
 res://interface/New_Game/New_Game.tscn
-res://Scripts Globais/music_controller.gd
-res://Resources/Music/music_controller.tscn
+res://Resources/Skill/fireball.tres
+res://Resources/Weapons/Shield/shield_data.gd
+res://Resources/Weapons/Sword/sword_basic.tres
+res://Resources/Weapons/Sword/sword_data.gd
+res://Resources/Weapons/Shield/shield_basic.tres
 res://interface/New_Game/Class_Selector.gd
-res://Resources/Skill/skill_data.gd
+res://Resources/Player/Player.tscn
+res://Scripts Globais/Global.gd
+res://interface/New_Game/new_game.gd
+res://Resources/Player/Player.gd
+res://interface/main_menu/menu.tscn

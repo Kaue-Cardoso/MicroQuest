@@ -1,3 +1,7 @@
+ShieldData
+SkillData
+StaffData
+DaggerData
 HammerData
 SwordData
 WeaponData

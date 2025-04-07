@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=2 format=3 uid="uid://cftudcear3rmk"]
+
+[ext_resource type="Script" uid="uid://esbjlpcv85cm" path="res://Resources/Skill/skill_data.gd" id="1_b16mx"]
+
+[resource]
+script = ExtResource("1_b16mx")
+name_skill = " Bola de Fogo"
+type = " Magic"
+format = "Active "
+type_damage = "Fire "
+damage = 4
+cost = 2
+colldown = 2
+description = "Uma bola Maneira"
+metadata/_custom_type_script = "uid://esbjlpcv85cm"

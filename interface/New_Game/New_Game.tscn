@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dxftxqmquoqo"]
+[gd_scene load_steps=31 format=3 uid="uid://dxftxqmquoqo"]
 
 [ext_resource type="FontFile" uid="uid://cn5layxo7bvb0" path="res://Assets/Fonts/equipment-pro-v1.1/EquipmentPro.otf" id="1_dng5m"]
 [ext_resource type="Texture2D" uid="uid://c1y1ypk2u0304" path="res://Assets/backgrounds/castle_night.png" id="1_olkg1"]
@@ -64,9 +64,22 @@ font_size = 18
 font = ExtResource("1_dng5m")
 font_size = 24
 
+[sub_resource type="LabelSettings" id="LabelSettings_4dl58"]
+font = ExtResource("1_dng5m")
+font_size = 24
+
 [sub_resource type="LabelSettings" id="LabelSettings_73ble"]
 font = ExtResource("1_dng5m")
-font_size = 20
+font_size = 18
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ya76c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_08c5w"]
+font = ExtResource("1_dng5m")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Character_Select" type="Control"]
 layout_mode = 3
@@ -509,9 +522,9 @@ horizontal_alignment = 2
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
+theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_bottom = 40
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Margin_Footer"]
 layout_mode = 2
@@ -530,8 +543,8 @@ size_flags_horizontal = 3
 
 [node name="M_Equipments_Label" type="MarginContainer" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens"]
 layout_mode = 2
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_bottom = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
 
 [node name="Label" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Itens/M_Equipments_Label"]
 layout_mode = 2
@@ -580,8 +593,8 @@ size_flags_horizontal = 3
 
 [node name="M_Skill_Label" type="MarginContainer" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills"]
 layout_mode = 2
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_bottom = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
 
 [node name="Skills" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/M_Skill_Label"]
 layout_mode = 2
@@ -605,17 +618,19 @@ size_flags_horizontal = 3
 
 [node name="Skill1_name" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
 layout_mode = 2
-label_settings = SubResource("LabelSettings_73ble")
+label_settings = SubResource("LabelSettings_4dl58")
 horizontal_alignment = 1
 
 [node name="Skill1_desc" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
+custom_minimum_size = Vector2(428, 20)
 layout_mode = 2
 label_settings = SubResource("LabelSettings_73ble")
 horizontal_alignment = 1
+autowrap_mode = 1
 
 [node name="Skill2_name" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
 layout_mode = 2
-label_settings = SubResource("LabelSettings_73ble")
+label_settings = SubResource("LabelSettings_4dl58")
 horizontal_alignment = 1
 
 [node name="Skill2_desc" type="Label" parent="VBoxContainer/Margin_Footer/MarginContainer/VBoxContainer/V_Skills/MarginContainer2/H_Skills/V_Skill_Name"]
@@ -623,22 +638,72 @@ layout_mode = 2
 label_settings = SubResource("LabelSettings_73ble")
 horizontal_alignment = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/Margin_Footer"]
-layout_mode = 2
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 0
 alignment = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Margin_Footer/VBoxContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
 layout_mode = 2
-theme_override_constants/separation = 700
+theme_override_constants/separation = 730
 alignment = 1
 
-[node name="Back" type="Button" parent="VBoxContainer/Margin_Footer/VBoxContainer2/HBoxContainer"]
+[node name="Back" type="Button" parent="VBoxContainer2/HBoxContainer" groups=["button"]]
 layout_mode = 2
-text = "Voltar"
+theme_override_colors/font_hover_color = Color(0.732595, 0.722447, 0.718086, 1)
+theme_override_colors/font_pressed_color = Color(0.960784, 0.756863, 0.2, 1)
+theme_override_fonts/font = ExtResource("1_dng5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ya76c")
+text = "Back"
+flat = true
 
-[node name="Confirm" type="Button" parent="VBoxContainer/Margin_Footer/VBoxContainer2/HBoxContainer"]
+[node name="Shadow" type="Label" parent="VBoxContainer2/HBoxContainer/Back"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back"
+label_settings = SubResource("LabelSettings_08c5w")
+horizontal_alignment = 1
+
+[node name="Confirm" type="Button" parent="VBoxContainer2/HBoxContainer" groups=["button"]]
+unique_name_in_owner = true
 layout_mode = 2
-text = "Confirmar"
+theme_override_colors/font_hover_color = Color(0.732595, 0.722447, 0.718086, 1)
+theme_override_colors/font_pressed_color = Color(0.960784, 0.756863, 0.2, 1)
+theme_override_fonts/font = ExtResource("1_dng5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ya76c")
+text = "Confirm"
+flat = true
+
+[node name="Shadow" type="Label" parent="VBoxContainer2/HBoxContainer/Confirm"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Confirm"
+label_settings = SubResource("LabelSettings_08c5w")
+horizontal_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
@@ -649,5 +714,5 @@ text = "Confirmar"
 [connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background5/MarginContainer/Ranger" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_ranger_pressed"]
 [connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background6/MarginContainer/Bard" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_bard_pressed"]
 [connection signal="text_changed" from="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Name/TextEdit" to="." method="_on_text_edit_text_changed"]
-[connection signal="pressed" from="VBoxContainer/Margin_Footer/VBoxContainer2/HBoxContainer/Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="VBoxContainer/Margin_Footer/VBoxContainer2/HBoxContainer/Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/Confirm" to="." method="_on_confirm_pressed"]

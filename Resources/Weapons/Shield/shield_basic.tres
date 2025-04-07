@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ShieldData" load_steps=2 format=3 uid="uid://cpg2lfdobqmpe"]
+
+[ext_resource type="Script" uid="uid://t6tf3uis3s4b" path="res://Resources/Weapons/Shield/shield_data.gd" id="1_7iq4h"]
+
+[resource]
+script = ExtResource("1_7iq4h")
+type = "Shield"
+type_damage = "Contusão"
+type_combat = "Fight"
+block_value = 6
+name = "Escudo de Madeira"
+damage = 0
+description = "Uma Obra linda"
+metadata/_custom_type_script = "uid://t6tf3uis3s4b"

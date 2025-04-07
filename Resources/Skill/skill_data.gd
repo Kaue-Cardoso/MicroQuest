@@ -1,15 +1,12 @@
 class_name SkillData extends Resource
 
-var id: int = 0
-@export var nome_classe: String = ""
-@export var tipo: String = ""
-@export var sprite: Texture2D = load("res://Assets/Char/Sprite/Undefined.png")
-@export var pvs: int = 0
-@export var pms: int = 0
-@export var forca: int = 0
-@export var destreza: int = 0
-@export var constituicao: int = 0
-@export var inteligencia: int = 0
-@export var carisma: int = 0
-
- 
+#var id: int = 0
+@export var name_skill: String = " "
+@export var sprite: Texture2D
+@export var type: String = " " #Magic, Trick
+@export var format: String = " " #Active, Passive
+@export var type_damage: String = " "
+@export var damage: int = 0
+@export var cost: int = 0
+@export var colldown: int = 0
+@export var description: String = " "

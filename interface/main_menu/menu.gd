@@ -8,7 +8,6 @@ func _ready():
 	
 	if _has_save == false:
 		$ButtonsContainers/Carregar.disabled = true
-		$ButtonsContainers/Carregar/Shadow.hide()
 	for _button in get_tree().get_nodes_in_group("button"):
 		_button.pressed.connect(_on_button_pressed.bind(_button))
 
