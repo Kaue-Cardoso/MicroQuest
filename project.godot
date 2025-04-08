@@ -17,18 +17,17 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://Scripts Globais/Global.gd"
 MusicController="*res://Resources/Music/music_controller.tscn"
-Missions="*res://Scripts Globais/Missions.gd"
-Player="*res://Resources/Player/Player.gd"
 
 [display]
 
-window/size/viewport_width=960
-window/size/viewport_height=640
-window/stretch/mode="viewport"
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+textures/stretch/mode="canvas_items"
+textures/size/viewport_height=720

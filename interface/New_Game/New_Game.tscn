@@ -1,22 +1,23 @@
-[gd_scene load_steps=31 format=3 uid="uid://dxftxqmquoqo"]
+[gd_scene load_steps=32 format=3 uid="uid://dxftxqmquoqo"]
 
 [ext_resource type="FontFile" uid="uid://cn5layxo7bvb0" path="res://Assets/Fonts/equipment-pro-v1.1/EquipmentPro.otf" id="1_dng5m"]
 [ext_resource type="Texture2D" uid="uid://c1y1ypk2u0304" path="res://Assets/backgrounds/castle_night.png" id="1_olkg1"]
 [ext_resource type="Script" uid="uid://5lep84ifawma" path="res://interface/New_Game/new_game.gd" id="1_ya76c"]
 [ext_resource type="Texture2D" uid="uid://crwaws6h6phig" path="res://Assets/Char/Faceset/Knight_faceset.png" id="2_tsrpv"]
 [ext_resource type="Texture2D" uid="uid://cin8lotj1sxst" path="res://Assets/Char/Faceset/Knight_faceset_select.png" id="3_3grly"]
-[ext_resource type="Texture2D" uid="uid://p7dhdvhn4ykx" path="res://Assets/Char/Faceset/Rogue_faceset.png" id="4_bh7o8"]
-[ext_resource type="Texture2D" uid="uid://bvwabgvtm2yqx" path="res://Assets/Char/Faceset/Rogue_faceset_select.png" id="5_0qme6"]
+[ext_resource type="Texture2D" uid="uid://bu6mhx2qn2g4w" path="res://Assets/Char/Faceset/Rogue_faceset.png" id="4_bh7o8"]
+[ext_resource type="Texture2D" uid="uid://b2bobfoevw7li" path="res://Assets/Char/Faceset/Rogue_faceset_select.png" id="5_0qme6"]
 [ext_resource type="Texture2D" uid="uid://nw52hek2ldwp" path="res://Assets/Char/Faceset/Mage_faceset.png" id="6_6080e"]
 [ext_resource type="Texture2D" uid="uid://dgej0g1t46p7d" path="res://Assets/Char/Faceset/Mage_faceset_select.png" id="7_5v0aa"]
-[ext_resource type="Texture2D" uid="uid://sa8h7r05hsif" path="res://Assets/Char/Faceset/Paladin_faceset.png" id="8_8skh2"]
-[ext_resource type="Texture2D" uid="uid://dn3dn0gnj4yyr" path="res://Assets/Char/Faceset/Paladin_faceset_select.png" id="9_2x1j4"]
+[ext_resource type="Texture2D" uid="uid://c54p51lw4qoyp" path="res://Assets/Char/Faceset/Paladin_faceset.png" id="8_8skh2"]
+[ext_resource type="Texture2D" uid="uid://c0o4lhl7tq366" path="res://Assets/Char/Faceset/Paladin_faceset_select.png" id="9_2x1j4"]
 [ext_resource type="Texture2D" uid="uid://c63kvsfgagak0" path="res://Assets/Char/Faceset/Ranger_faceset.png" id="10_cis00"]
 [ext_resource type="Texture2D" uid="uid://cajap1iuq7edo" path="res://Assets/Char/Faceset/Ranger_faceset_select.png" id="11_5sttt"]
 [ext_resource type="Texture2D" uid="uid://begash8bhalvp" path="res://Assets/Char/Faceset/Warlock_faceset.png" id="12_2ijsn"]
 [ext_resource type="Texture2D" uid="uid://chnqvnusxfap0" path="res://Assets/Char/Faceset/Warlock_faceset_select.png" id="13_df3my"]
 [ext_resource type="Script" uid="uid://oo61mii3mq1j" path="res://interface/New_Game/Class_Selector.gd" id="15_dctb4"]
 [ext_resource type="Texture2D" uid="uid://clwasjv1w3vc4" path="res://Assets/Char/Sprite/Undefined.png" id="15_wnhrg"]
+[ext_resource type="Texture2D" uid="uid://uys76wfo7a5f" path="res://Resources/Class/ClassData/Basic/Sprite-0001.png" id="17_73ble"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_oxqtj"]
 font = ExtResource("1_dng5m")
@@ -88,9 +89,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.00466, 1.00832)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_ya76c")
+
+[node name="Class_Selector" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("15_dctb4")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -106,6 +114,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -60.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -311,6 +320,7 @@ theme_override_constants/line_spacing = 1
 theme_override_constants/caret_width = 0
 theme_override_fonts/font = ExtResource("1_dng5m")
 theme_override_font_sizes/font_size = 20
+text = " "
 placeholder_text = "..."
 
 [node name="H_Sprite_Atributes" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align"]
@@ -322,12 +332,20 @@ layout_mode = 2
 size_flags_horizontal = 3
 alignment = 2
 
+[node name="Test" type="CharacterBody2D" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite"]
+position = Vector2(197.078, 67.0609)
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Test"]
+texture = ExtResource("17_73ble")
+hframes = 2
+
 [node name="Skeleton" type="Node2D" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite"]
-position = Vector2(119, 77)
+visible = false
+position = Vector2(200.064, 77)
 scale = Vector2(2, 2)
 
 [node name="Class" type="Node2D" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton"]
-script = ExtResource("15_dctb4")
 
 [node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class"]
 texture = ExtResource("15_wnhrg")
@@ -339,6 +357,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Class" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
 text = "Class"
@@ -352,6 +371,7 @@ label_settings = SubResource("LabelSettings_kwx61")
 horizontal_alignment = 1
 
 [node name="Type_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Fisico"
 label_settings = SubResource("LabelSettings_t606p")
@@ -371,10 +391,10 @@ text = "Atributos"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Pvs" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+[node name="LPs" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
 layout_mode = 2
 
-[node name="PVs_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Pvs"]
+[node name="LPs_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/LPs"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -383,7 +403,7 @@ theme_override_font_sizes/font_size = 24
 text = "HP"
 label_settings = SubResource("LabelSettings_78npe")
 
-[node name="PVs_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Pvs"]
+[node name="LPs_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/LPs"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -392,10 +412,10 @@ theme_override_font_sizes/font_size = 24
 label_settings = SubResource("LabelSettings_78npe")
 horizontal_alignment = 2
 
-[node name="PMs" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+[node name="MPs" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
 layout_mode = 2
 
-[node name="PMs_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/PMs"]
+[node name="MPs_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/MPs"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -404,7 +424,7 @@ theme_override_font_sizes/font_size = 24
 text = "MP"
 label_settings = SubResource("LabelSettings_78npe")
 
-[node name="PMs_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/PMs"]
+[node name="MPs_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/MPs"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -413,10 +433,10 @@ theme_override_font_sizes/font_size = 24
 label_settings = SubResource("LabelSettings_78npe")
 horizontal_alignment = 2
 
-[node name="Forca" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+[node name="Strength" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
 layout_mode = 2
 
-[node name="Forca_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Forca"]
+[node name="Strength_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Strength"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -425,7 +445,7 @@ theme_override_font_sizes/font_size = 24
 text = "Forca"
 label_settings = SubResource("LabelSettings_78npe")
 
-[node name="Forca_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Forca"]
+[node name="Strength_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Strength"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -434,10 +454,10 @@ theme_override_font_sizes/font_size = 24
 label_settings = SubResource("LabelSettings_78npe")
 horizontal_alignment = 2
 
-[node name="Destreza" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+[node name="Dexterity" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
 layout_mode = 2
 
-[node name="Destreza_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Destreza"]
+[node name="Dexterity_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Dexterity"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -446,7 +466,7 @@ theme_override_font_sizes/font_size = 24
 text = "Destreza"
 label_settings = SubResource("LabelSettings_78npe")
 
-[node name="Destreza_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Destreza"]
+[node name="Dexterity_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Dexterity"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -455,10 +475,10 @@ theme_override_font_sizes/font_size = 24
 label_settings = SubResource("LabelSettings_78npe")
 horizontal_alignment = 2
 
-[node name="Constituicao" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+[node name="Constitution" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
 layout_mode = 2
 
-[node name="Constituicao_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Constituicao"]
+[node name="Constitution_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Constitution"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -467,7 +487,7 @@ theme_override_font_sizes/font_size = 24
 text = "Constituição"
 label_settings = SubResource("LabelSettings_78npe")
 
-[node name="Constituicao_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Constituicao"]
+[node name="Constitution_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Constitution"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -476,10 +496,10 @@ theme_override_font_sizes/font_size = 24
 label_settings = SubResource("LabelSettings_78npe")
 horizontal_alignment = 2
 
-[node name="Inteligencia" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+[node name="Intelligence" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
 layout_mode = 2
 
-[node name="Inteligencia_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Inteligencia"]
+[node name="Intelligence_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Intelligence"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -488,7 +508,7 @@ theme_override_font_sizes/font_size = 24
 text = "Inteligencia"
 label_settings = SubResource("LabelSettings_78npe")
 
-[node name="Inteligencia_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Inteligencia"]
+[node name="Intelligence_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Intelligence"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -497,10 +517,10 @@ theme_override_font_sizes/font_size = 24
 label_settings = SubResource("LabelSettings_78npe")
 horizontal_alignment = 2
 
-[node name="Carisma" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
+[node name="Charisma" type="HBoxContainer" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer"]
 layout_mode = 2
 
-[node name="Carisma_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Carisma"]
+[node name="Charisma_Label" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Charisma"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -509,7 +529,7 @@ theme_override_font_sizes/font_size = 24
 text = "Carisma"
 label_settings = SubResource("LabelSettings_78npe")
 
-[node name="Carisma_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Carisma"]
+[node name="Charisma_Value" type="Label" parent="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/VBoxContainer/Charisma"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -524,7 +544,6 @@ size_flags_vertical = 3
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 40
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Margin_Footer"]
 layout_mode = 2
@@ -644,17 +663,25 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -40.0
+offset_left = 0.995362
+offset_top = -60.485
+offset_right = 0.995361
+offset_bottom = -0.485046
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2"]
 layout_mode = 2
-theme_override_constants/separation = 730
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1000
 alignment = 1
 
-[node name="Back" type="Button" parent="VBoxContainer2/HBoxContainer" groups=["button"]]
+[node name="Back" type="Button" parent="VBoxContainer2/MarginContainer/HBoxContainer" groups=["button"]]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.732595, 0.722447, 0.718086, 1)
 theme_override_colors/font_pressed_color = Color(0.960784, 0.756863, 0.2, 1)
@@ -664,7 +691,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_ya76c")
 text = "Back"
 flat = true
 
-[node name="Shadow" type="Label" parent="VBoxContainer2/HBoxContainer/Back"]
+[node name="Shadow" type="Label" parent="VBoxContainer2/MarginContainer/HBoxContainer/Back"]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 14
@@ -679,7 +706,7 @@ text = "Back"
 label_settings = SubResource("LabelSettings_08c5w")
 horizontal_alignment = 1
 
-[node name="Confirm" type="Button" parent="VBoxContainer2/HBoxContainer" groups=["button"]]
+[node name="Confirm" type="Button" parent="VBoxContainer2/MarginContainer/HBoxContainer" groups=["button"]]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.732595, 0.722447, 0.718086, 1)
@@ -690,7 +717,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_ya76c")
 text = "Confirm"
 flat = true
 
-[node name="Shadow" type="Label" parent="VBoxContainer2/HBoxContainer/Confirm"]
+[node name="Shadow" type="Label" parent="VBoxContainer2/MarginContainer/HBoxContainer/Confirm"]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 14
@@ -714,5 +741,5 @@ horizontal_alignment = 1
 [connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background5/MarginContainer/Ranger" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_ranger_pressed"]
 [connection signal="pressed" from="VBoxContainer/Margin_Content/H_Interactive/Grid_Sprites/Background6/MarginContainer/Bard" to="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Sprite_Atributes/V_Sprite/Skeleton/Class" method="_on_bard_pressed"]
 [connection signal="text_changed" from="VBoxContainer/Margin_Content/H_Interactive/HContainerValues/V_Align/H_Name/TextEdit" to="." method="_on_text_edit_text_changed"]
-[connection signal="pressed" from="VBoxContainer2/HBoxContainer/Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="VBoxContainer2/HBoxContainer/Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="VBoxContainer2/MarginContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer2/MarginContainer/HBoxContainer/Confirm" to="." method="_on_confirm_pressed"]
