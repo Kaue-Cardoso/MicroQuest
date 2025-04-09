@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ClassData" load_steps=3 format=3 uid="uid://dr4p31jr4a0v1"]
 
-[ext_resource type="Script" uid="uid://cffkcxo1owqd8" path="res://Resources/Class/class.gd" id="1_k8ubi"]
+[ext_resource type="Script" uid="uid://cffkcxo1owqd8" path="res://Resources/Class/ClassData/class.gd" id="1_k8ubi"]
 [ext_resource type="Texture2D" uid="uid://dtuycjlfv04pr" path="res://Assets/Char/Sprite/Ranger.png" id="2_bsrna"]
 
 [resource]

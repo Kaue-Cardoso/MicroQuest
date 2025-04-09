@@ -1,6 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1744123966
-Class_control.txt::TextFile::-1::1744123966::0::1::::<><><>0<>0<><>::
+::res://::1744146935
 icon.svg::CompressedTexture2D/CompressedTexture2D::4472364477369338802::1742259918::1742692960::1::::<><><>0<>0<>1be7f02c3f6633b0ce6e59c2c8eb3483<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1743040280
 ::res://Assets/backgrounds/::1742692960
@@ -72,7 +71,8 @@ MatchupPro.woff::FontFile/FontFile::3442754839382179810::1741723215::1742692960:
 Exploring The Unknown (Loop).wav::AudioStreamWAV/AudioStreamWAV::7224432760760386894::1743040388::1743042185::1::::<><><>0<>0<>a49504525e6ac601d4ab39a8137a748d<>res://.godot/imported/Exploring The Unknown (Loop).wav-d6ded06e373efe47a64c77c64f5929c6.sample::
 xDeviruchi - Exploring The Unknown.wav::AudioStreamWAV/AudioStreamWAV::9177617128586564089::1743040405::1743040575::1::::<><><>0<>0<>36994a217e3a02faba4f04e0185edf02<>res://.godot/imported/xDeviruchi - Exploring The Unknown.wav-84cd52f3d7b6c6f40504a5d42a5a8565.sample::
 ::res://Documentos/::1742269228
-::res://Documentos/Prototipos/::1742692960
+::res://Documentos/Prototipos/::1744147259
+Class_control.txt::TextFile::-1::1744147259::0::1::::<><><>0<>0<><>::
 Select_Screen.png::CompressedTexture2D/CompressedTexture2D::1693459781365502609::1742269239::1742692960::1::::<><><>0<>0<>4bcfbb2496530fd5363bc09c923295f9<>res://.godot/imported/Select_Screen.png-3967f63de79da3197dd82fbf6ef1c6e8.ctex::
 ::res://GameScreen/::1743473197
 ::res://GameScreen/Game_Screen/::1743600268
@@ -87,33 +87,34 @@ Loaded_Game.tscn::PackedScene/PackedScene::6395868507055701418::1742693083::0::1
 ::res://interface/main_menu/::1744063934
 menu.gd::GDScript/GDScript::2201000332973142845::1744063934::0::1::::MainMenu<>Control<><>0<>0<><>::
 menu.tscn::PackedScene/PackedScene::8772400514110645332::1744057404::0::1::::<><><>0<>0<><>::uid://6mgfh6oxcaft::::res://interface/main_menu/menu.gd<>uid://yckutb1qe0y1::::res://Assets/Fonts/expression-pro-v1.1/ExpressionPro.otf<>uid://bm6d7mp2opgv0::::res://Assets/backgrounds/castle.png<>uid://cn5layxo7bvb0::::res://Assets/Fonts/equipment-pro-v1.1/EquipmentPro.otf
-::res://interface/New_Game/::1744121721
-Class_Selector.gd::GDScript::1013474399946606813::1744121721::0::1::::ClassSelector<>Control<><>0<>0<><>::
-new_game.gd::GDScript::2128644897755342080::1744121721::0::1::::<>Control<><>0<>0<><>::
-New_Game.tscn::PackedScene::258385967626830598::1744121721::0::1::::<><><>0<>0<><>::uid://cn5layxo7bvb0::::res://Assets/Fonts/equipment-pro-v1.1/EquipmentPro.otf<>uid://c1y1ypk2u0304::::res://Assets/backgrounds/castle_night.png<>uid://5lep84ifawma::::res://interface/New_Game/new_game.gd<>uid://crwaws6h6phig::::res://Assets/Char/Faceset/Knight_faceset.png<>uid://cin8lotj1sxst::::res://Assets/Char/Faceset/Knight_faceset_select.png<>uid://bu6mhx2qn2g4w::::res://Assets/Char/Faceset/Rogue_faceset.png<>uid://b2bobfoevw7li::::res://Assets/Char/Faceset/Rogue_faceset_select.png<>uid://nw52hek2ldwp::::res://Assets/Char/Faceset/Mage_faceset.png<>uid://dgej0g1t46p7d::::res://Assets/Char/Faceset/Mage_faceset_select.png<>uid://c54p51lw4qoyp::::res://Assets/Char/Faceset/Paladin_faceset.png<>uid://c0o4lhl7tq366::::res://Assets/Char/Faceset/Paladin_faceset_select.png<>uid://c63kvsfgagak0::::res://Assets/Char/Faceset/Ranger_faceset.png<>uid://cajap1iuq7edo::::res://Assets/Char/Faceset/Ranger_faceset_select.png<>uid://begash8bhalvp::::res://Assets/Char/Faceset/Warlock_faceset.png<>uid://chnqvnusxfap0::::res://Assets/Char/Faceset/Warlock_faceset_select.png<>uid://oo61mii3mq1j::::res://interface/New_Game/Class_Selector.gd<>uid://clwasjv1w3vc4::::res://Assets/Char/Sprite/Undefined.png<>uid://uys76wfo7a5f::::res://Resources/Class/ClassData/Basic/Sprite-0001.png
+::res://interface/New_Game/::1744148256
+Class_Selector.gd::GDScript::1013474399946606813::1744147307::0::1::::ClassSelector<>Control<><>0<>0<><>::
+new_game.gd::GDScript::2128644897755342080::1744148256::0::1::::<>Control<><>0<>0<><>::
+New_Game.tscn::PackedScene::258385967626830598::1744148256::0::1::::<><><>0<>0<><>::uid://cn5layxo7bvb0::::res://Assets/Fonts/equipment-pro-v1.1/EquipmentPro.otf<>uid://c1y1ypk2u0304::::res://Assets/backgrounds/castle_night.png<>uid://5lep84ifawma::::res://interface/New_Game/new_game.gd<>uid://crwaws6h6phig::::res://Assets/Char/Faceset/Knight_faceset.png<>uid://cin8lotj1sxst::::res://Assets/Char/Faceset/Knight_faceset_select.png<>uid://bu6mhx2qn2g4w::::res://Assets/Char/Faceset/Rogue_faceset.png<>uid://b2bobfoevw7li::::res://Assets/Char/Faceset/Rogue_faceset_select.png<>uid://nw52hek2ldwp::::res://Assets/Char/Faceset/Mage_faceset.png<>uid://dgej0g1t46p7d::::res://Assets/Char/Faceset/Mage_faceset_select.png<>uid://c54p51lw4qoyp::::res://Assets/Char/Faceset/Paladin_faceset.png<>uid://c0o4lhl7tq366::::res://Assets/Char/Faceset/Paladin_faceset_select.png<>uid://c63kvsfgagak0::::res://Assets/Char/Faceset/Ranger_faceset.png<>uid://cajap1iuq7edo::::res://Assets/Char/Faceset/Ranger_faceset_select.png<>uid://begash8bhalvp::::res://Assets/Char/Faceset/Warlock_faceset.png<>uid://chnqvnusxfap0::::res://Assets/Char/Faceset/Warlock_faceset_select.png<>uid://oo61mii3mq1j::::res://interface/New_Game/Class_Selector.gd<>uid://uys76wfo7a5f::::res://Resources/Class/Basic/Sprite-0001.png
 ::res://Resources/::1744116247
-::res://Resources/Class/::1744112380
-bard.tres::Resource/ClassData::8145918863630391578::1743547446::0::1::::<><><>0<>0<><>::uid://cffkcxo1owqd8::::res://Resources/Class/class.gd<>uid://cfu5m8khnfvqi::::res://Assets/Char/Sprite/Bard.png
-class.gd::GDScript::5134719446727365527::1744112380::0::1::::ClassData<>Resource<><>0<>0<><>::
-knight.tres::Resource/ClassData::1868325415533963509::1743547446::0::1::::<><><>0<>0<><>::uid://cffkcxo1owqd8::::res://Resources/Class/class.gd<>uid://btd5asj5ow6lo::::res://Assets/Char/Sprite/Knight.png
-mage.tres::Resource/ClassData::1203050745913157693::1743547446::0::1::::<><><>0<>0<><>::uid://cffkcxo1owqd8::::res://Resources/Class/class.gd<>uid://cjgdekfku2c41::::res://Assets/Char/Sprite/Mage.png
-paladin.tres::Resource/ClassData::2098512220609294921::1744078637::0::1::::<><><>0<>0<><>::uid://cffkcxo1owqd8::::res://Resources/Class/class.gd<>uid://br0c051k17q35::::res://Assets/Char/Sprite/Paladin.png
-ranger.tres::Resource/ClassData::8413301485235950328::1743547446::0::1::::<><><>0<>0<><>::uid://cffkcxo1owqd8::::res://Resources/Class/class.gd<>uid://dtuycjlfv04pr::::res://Assets/Char/Sprite/Ranger.png
-rogue.tres::Resource/ClassData::7162858093986635966::1744078637::0::1::::<><><>0<>0<><>::uid://cffkcxo1owqd8::::res://Resources/Class/class.gd<>uid://b2dc8ekwck8mh::::res://Assets/Char/Sprite/Rogue.png
-::res://Resources/Class/ClassData/::1744120512
-::res://Resources/Class/ClassData/Basic/::1744120993
-Sprite-0001.png::CompressedTexture2D/CompressedTexture2D::1454473652589531521::1744120992::1744120993::1::::<><><>0<>0<>c10052fbc35433e09cad503164d1b7e5<>res://.godot/imported/Sprite-0001.png-29af1e2e7f1db8e592451b16dbd36a2a.ctex::
-::res://Resources/Class/ClassData/Knight/::1744121721
-knight.tscn::PackedScene::5147563213983929967::1744121721::0::1::::<><><>0<>0<><>::uid://ddpf26mhhl30k::::res://Resources/Class/ClassData/Knight/KnightIdle.png
-KnightIdle.png::CompressedTexture2D/CompressedTexture2D::7401147696792936820::1744085995::1744087293::1::::<><><>0<>0<>006f465b9f2a71e3249be6e34b2cfd5d<>res://.godot/imported/KnightIdle.png-230db96607c28f8b177eaba76e62bda5.ctex::
-::res://Resources/Class/ClassData/Mage/::1744121721
-mage.tscn::PackedScene::1295920571889327847::1744121721::0::1::::<><><>0<>0<><>::uid://cff135bciubr3::::res://Resources/Class/ClassData/Mage/MageIdle.png
-MageIdle.png::CompressedTexture2D/CompressedTexture2D::5135737695735586178::1744087207::1744113098::1::::<><><>0<>0<>32e377e79b392f68c4b278fe7bc55c2f<>res://.godot/imported/MageIdle.png-edbb906f33a007e9d70663c6188ce33a.ctex::
+::res://Resources/Class/::1744129147
+::res://Resources/Class/Basic/::1744129148
+Sprite-0001.png::CompressedTexture2D/CompressedTexture2D::1454473652589531521::1744120992::1744129148::1::::<><><>0<>0<>f6f9f8cce9055f7df66db9e87c48aa1b<>res://.godot/imported/Sprite-0001.png-5bea0b8e13fef1e873433a790162c80b.ctex::
+::res://Resources/Class/ClassData/::1744147259
+bard.tres::Resource/ClassData::8145918863630391578::1744129136::0::1::::<><><>0<>0<><>::uid://cffkcxo1owqd8::::res://Resources/Class/ClassData/class.gd<>uid://cfu5m8khnfvqi::::res://Assets/Char/Sprite/Bard.png
+class.gd::GDScript::5134719446727365527::1744147259::0::1::::ClassData<>Resource<><>0<>0<><>::
+knight.tres::Resource/ClassData::1868325415533963509::1744132580::0::1::::<><><>0<>0<><>::uid://cffkcxo1owqd8::::res://Resources/Class/ClassData/class.gd
+mage.tres::Resource/ClassData::1203050745913157693::1744132655::0::1::::<><><>0<>0<><>::uid://cffkcxo1owqd8::::res://Resources/Class/ClassData/class.gd
+paladin.tres::Resource/ClassData::2098512220609294921::1744129136::0::1::::<><><>0<>0<><>::uid://cffkcxo1owqd8::::res://Resources/Class/ClassData/class.gd<>uid://br0c051k17q35::::res://Assets/Char/Sprite/Paladin.png
+ranger.tres::Resource/ClassData::8413301485235950328::1744129136::0::1::::<><><>0<>0<><>::uid://cffkcxo1owqd8::::res://Resources/Class/ClassData/class.gd<>uid://dtuycjlfv04pr::::res://Assets/Char/Sprite/Ranger.png
+rogue.tres::Resource/ClassData::7162858093986635966::1744129136::0::1::::<><><>0<>0<><>::uid://cffkcxo1owqd8::::res://Resources/Class/ClassData/class.gd<>uid://b2dc8ekwck8mh::::res://Assets/Char/Sprite/Rogue.png
+::res://Resources/Class/Knight/::1744129981
+knight.tscn::PackedScene/PackedScene::5147563213983929967::1744129981::0::1::::<><><>0<>0<><>::uid://ddpf26mhhl30k::::res://Resources/Class/Knight/KnightIdle.png
+KnightIdle.png::CompressedTexture2D/CompressedTexture2D::7401147696792936820::1744085995::1744129148::1::::<><><>0<>0<>80cd50bb26ff67080e78710f3314f8a7<>res://.godot/imported/KnightIdle.png-be65ad8d409b2fc486e08a73f78592a1.ctex::
+::res://Resources/Class/Mage/::1744129883
+mage.tscn::PackedScene/PackedScene::1295920571889327847::1744129883::0::1::::<><><>0<>0<><>::uid://cff135bciubr3::::res://Resources/Class/Mage/MageIdle.png
+MageIdle.png::CompressedTexture2D/CompressedTexture2D::5135737695735586178::1744087207::1744129148::1::::<><><>0<>0<>19ef4d877922341c782f56ba1dd06aaa<>res://.godot/imported/MageIdle.png-1144f74cdbdf00730ed3beaabfe1d1d4.ctex::
 ::res://Resources/Dialog/::1744063934
 dialog.gd::GDScript/GDScript::7184801297594852981::1744063934::0::1::::DialogScreen<>Control<><>0<>0<><>::
 Dialog.tscn::PackedScene/PackedScene::5408319186996905822::1743040971::0::1::::<><><>0<>0<><>::uid://cin8lotj1sxst::::res://Assets/Char/Faceset/Knight_faceset_select.png<>uid://dammvltra23y4::::res://Resources/Dialog/dialog.gd<>uid://cn5layxo7bvb0::::res://Assets/Fonts/equipment-pro-v1.1/EquipmentPro.otf
 ::res://Resources/Music/::1743962607
 music_controller.tscn::PackedScene/PackedScene::388173446268818005::1743962607::0::1::::<><><>0<>0<><>::uid://d18rnw88v3syt::::res://Scripts Globais/music_controller.gd<>uid://da6tl78vwkxvy::::res://Assets/Music/Exploring The Unknown (Loop).wav
+::res://Resources/player/::0
 ::res://Resources/Skill/::1744065053
 fireball.tres::Resource/SkillData::5164228571390299990::1744065053::0::1::::<><><>0<>0<><>::uid://esbjlpcv85cm::::res://Resources/Skill/skill_data.gd
 skill_data.gd::GDScript/GDScript::317991564312299552::1743996762::0::1::::SkillData<>Resource<><>0<>0<><>::
@@ -134,9 +135,9 @@ staff_data.gd::GDScript/GDScript::7733424992023366206::1743963243::0::1::::Staff
 ::res://Resources/Weapons/Sword/::1744030161
 sword_basic.tres::Resource/SwordData::2616414131863152707::1744030161::0::1::::<><><>0<>0<><>::uid://bvejxssqf8a8r::::res://Resources/Weapons/Sword/sword_data.gd
 sword_data.gd::GDScript/GDScript::3869232411264459723::1744030161::0::1::::SwordData<>WeaponData<><>0<>0<><>::
-::res://Scripts Globais/::1744121721
-Global.gd::GDScript::1758048938800652808::1744121721::0::1::::<>Node<><>0<>0<><>::
+::res://Scripts Globais/::1744140387
+Global.gd::GDScript/GDScript::1758048938800652808::1744140387::0::1::::<>Node<><>0<>0<><>::
 Missions.gd::GDScript/GDScript::5947990090094746874::1744063934::0::1::::<>Node<><>0<>0<><>::
 music_controller.gd::GDScript/GDScript::9053353063770714395::1743645786::0::1::::<>Node2D<><>0<>0<><>::
-save_manager.gd::GDScript::5413552760521481943::1744116694::0::1::::<>Node<><>0<>0<><>::
+save_manager.gd::GDScript/GDScript::5413552760521481943::1744116694::0::1::::<>Node<><>0<>0<><>::
 Skills.gd::GDScript/GDScript::3440966051906110122::1743271416::0::1::::<>Node<><>0<>0<><>::

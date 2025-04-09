@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uys76wfo7a5f"
-path="res://.godot/imported/Sprite-0001.png-29af1e2e7f1db8e592451b16dbd36a2a.ctex"
+uid="uid://cff135bciubr3"
+path="res://.godot/imported/MageIdle.png-1144f74cdbdf00730ed3beaabfe1d1d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Class/ClassData/Basic/Sprite-0001.png"
-dest_files=["res://.godot/imported/Sprite-0001.png-29af1e2e7f1db8e592451b16dbd36a2a.ctex"]
+source_file="res://Resources/Class/Mage/MageIdle.png"
+dest_files=["res://.godot/imported/MageIdle.png-1144f74cdbdf00730ed3beaabfe1d1d4.ctex"]
 
 [params]
 

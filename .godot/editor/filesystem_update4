@@ -1,4 +1,13 @@
 res://interface/New_Game/New_Game.tscn
 res://interface/New_Game/new_game.gd
-res://Scripts Globais/Global.gd
+res://Resources/Class/ClassData/class.gd
+res://Documentos/Prototipos/Class_control.txt
 res://interface/New_Game/Class_Selector.gd
+res://Resources/Player/player_data.gd
+res://GameScreen/Game_Screen/Game.tscn
+res://saves/player_data_2025-04-08T20-20-48.tres
+res://Resources/Inventory/inventory_data.gd
+res://Resources/Inventory/item_data.gd
+res://Resources/Weapons/weapon_data.gd
+res://Resources/Armor/armor_data.gd
+res://saves/Kaue/player_data_2025-04-09T10-59-16.tres

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ArmorData" load_steps=2 format=3 uid="uid://doytawwa8660"]
+
+[ext_resource type="Script" uid="uid://dk6m1u80mi1u0" path="res://Resources/Armor/armor_data.gd" id="1_yp6xf"]
+
+[resource]
+script = ExtResource("1_yp6xf")
+defense = 0
+armor_type = " "
+item_name = "Item"
+max_stack = 1
+price = 0
+metadata/_custom_type_script = "uid://dk6m1u80mi1u0"

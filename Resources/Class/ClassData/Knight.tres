@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClassData" load_steps=2 format=3 uid="uid://1vbbt5w12vdd"]
+
+[ext_resource type="Script" uid="uid://cffkcxo1owqd8" path="res://Resources/Class/ClassData/class.gd" id="1_r8vkr"]
+
+[resource]
+script = ExtResource("1_r8vkr")
+nome_classe = "Cavaleiro"
+tipo = "Fisico"
+lp = 12
+mp = 6
+strength = 4
+dexterity = 1
+constitution = 3
+intelligence = 1
+charisma = 1
+metadata/_custom_type_script = "uid://cffkcxo1owqd8"

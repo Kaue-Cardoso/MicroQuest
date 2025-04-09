@@ -1,11 +1,11 @@
-extends Resource
+extends ItemData
 class_name WeaponData
 
 @export var name: String = ""
 @export var damage: int = 0
 @export var description: String = ""
 # @export var icon: Texture2D
-# @export var preco: int = 0
+# 
 # @export var peso: float = 0.5
 
 #var weapons = {

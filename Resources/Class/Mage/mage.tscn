@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cflru44inli4n"]
+[gd_scene load_steps=5 format=3 uid="uid://sp0vfub8h5pj"]
 
-[ext_resource type="Texture2D" uid="uid://ddpf26mhhl30k" path="res://Resources/Class/ClassData/Knight/KnightIdle.png" id="1_1j0xr"]
+[ext_resource type="Texture2D" uid="uid://cff135bciubr3" path="res://Resources/Class/Mage/MageIdle.png" id="1_wjb6u"]
 
-[sub_resource type="Animation" id="Animation_27efn"]
+[sub_resource type="Animation" id="Animation_4py6q"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -14,7 +14,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_1j0xr")]
+"values": [ExtResource("1_wjb6u")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -26,7 +26,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [6]
+"values": [9]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -41,9 +41,9 @@ tracks/2/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_1j0xr"]
+[sub_resource type="Animation" id="Animation_0qurc"]
 resource_name = "idle"
-length = 0.6
+length = 0.9
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -55,7 +55,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_1j0xr")]
+"values": [ExtResource("1_wjb6u")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -67,7 +67,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [6]
+"values": [9]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -76,25 +76,25 @@ tracks/2/path = NodePath("Texture:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.100045, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5]
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fa4bs"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p001o"]
 _data = {
-&"RESET": SubResource("Animation_27efn"),
-&"idle": SubResource("Animation_1j0xr")
+&"RESET": SubResource("Animation_4py6q"),
+&"idle": SubResource("Animation_0qurc")
 }
 
-[node name="Knight" type="CharacterBody2D"]
+[node name="Mage" type="CharacterBody2D"]
 
 [node name="Texture" type="Sprite2D" parent="."]
-texture = ExtResource("1_1j0xr")
-hframes = 6
+texture = ExtResource("1_wjb6u")
+hframes = 9
 
 [node name="Animation" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_fa4bs")
+&"": SubResource("AnimationLibrary_p001o")
 }

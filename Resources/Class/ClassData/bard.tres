@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ClassData" load_steps=3 format=3 uid="uid://dob7dge5x57sw"]
 
-[ext_resource type="Script" uid="uid://cffkcxo1owqd8" path="res://Resources/Class/class.gd" id="1_8gu5p"]
+[ext_resource type="Script" uid="uid://cffkcxo1owqd8" path="res://Resources/Class/ClassData/class.gd" id="1_8gu5p"]
 [ext_resource type="Texture2D" uid="uid://cfu5m8khnfvqi" path="res://Assets/Char/Sprite/Bard.png" id="2_5hhxl"]
 
 [resource]

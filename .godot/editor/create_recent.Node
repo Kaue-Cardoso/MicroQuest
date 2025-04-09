@@ -1,14 +1,14 @@
+MarginContainer
+LineEdit
+VBoxContainer
 AnimationPlayer
 Sprite2D
 Control
 CharacterBody2D
 AnimatedSprite2D
-MarginContainer
 Label
 AudioStreamPlayer
 AudioStreamPlayer2D
 CanvasLayer
 RichTextLabel
-VBoxContainer
 TextureRect
-ColorRect

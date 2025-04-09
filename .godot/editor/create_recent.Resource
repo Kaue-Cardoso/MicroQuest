@@ -1,3 +1,4 @@
+ArmorData
 ShieldData
 SkillData
 StaffData

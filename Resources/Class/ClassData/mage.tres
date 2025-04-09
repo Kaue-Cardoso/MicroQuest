@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClassData" load_steps=2 format=3 uid="uid://re1cm67uvfd2"]
+
+[ext_resource type="Script" uid="uid://cffkcxo1owqd8" path="res://Resources/Class/ClassData/class.gd" id="1_cv0ls"]
+
+[resource]
+script = ExtResource("1_cv0ls")
+nome_classe = "Mago"
+tipo = "Magico"
+lp = 8
+mp = 16
+strength = 1
+dexterity = 1
+constitution = 1
+intelligence = 5
+charisma = 2
+metadata/_custom_type_script = "uid://cffkcxo1owqd8"
