@@ -1,3 +1,4 @@
+res://Scripts Globais
 res://Resources/Armor
 res://interface/New_Game
 res://Resources/Player
@@ -9,7 +10,6 @@ res://Resources/Weapons/Hammer
 res://Resources/Weapons/Sword
 res://Resources/Class
 res://Resources/Weapons
-res://Scripts Globais
 res://GameScreen/Game_Screen
 res://Resources/Music
 res://GameScreen/intro_screen

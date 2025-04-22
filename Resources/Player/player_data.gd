@@ -7,7 +7,8 @@ class_name PlayerData
 @export var inventory: InventoryData
 #@export var skill_tree: SkillTreeData
 @export var sprite_path: String = ""
-
+var current_mission: Dictionary = {}
+@export var mission_count = 0
 func add_weapon(weapon: WeaponData):
 	if not weapons.has(weapon):
 		weapons.append(weapon)

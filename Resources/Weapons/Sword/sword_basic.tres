@@ -10,4 +10,7 @@ type_combat = "Fight"
 name = "Espada"
 damage = 3
 description = "Espada Basica"
+item_name = "Item"
+max_stack = 1
+price = 0
 metadata/_custom_type_script = "uid://bvejxssqf8a8r"

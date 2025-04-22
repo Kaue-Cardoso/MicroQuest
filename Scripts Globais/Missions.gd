@@ -29,7 +29,7 @@ var missions = {
 		"dates": 12,
 		"Boss": "Nothing"
 		}
-	],
+	]
 	#"Aquoris": [
 		#{
 		#"id": "01", 

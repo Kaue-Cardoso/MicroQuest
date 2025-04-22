@@ -163,8 +163,8 @@ func update_display_weapons():
 func get_player_data() -> PlayerData:
 	print("Resource: " ,current_weapon)
 	var data = PlayerData.new()
-	data.class_data = atributes_data
-	data.weapons = current_weapon
+	data.class_data = atributes_data.duplicate()
+	data.weapons = current_weapon.duplicate()
 	#data.skills = current_skill
 	data.sprite_path = "res://Resources/Class/%s/%s.tscn" % [current_class, current_class.to_lower()]
 	return data
