@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://tvb1ypb02xy2"]
+
+[ext_resource type="Script" uid="uid://bsyyhti5qjrk2" path="res://Scripts/interfaces/class_selector/class_button.gd" id="1_q3xwo"]
+
+[node name="Background" type="ColorRect"]
+custom_minimum_size = Vector2(128, 128)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_q3xwo")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="button" type="TextureButton" parent="MarginContainer"]
+layout_mode = 2
+stretch_mode = 0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/button" to="." method="_on_button_pressed"]

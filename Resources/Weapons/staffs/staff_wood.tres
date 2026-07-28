@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=2 format=3 uid="uid://i38wgokxti8o"]
+
+[ext_resource type="Script" uid="uid://36u65gug5n2e" path="res://Scripts/Resources/Items/weapon_data.gd" id="1_ypqi2"]
+
+[resource]
+script = ExtResource("1_ypqi2")
+damage = 2
+type = " staff"
+type_damage = " contusion"
+type_combat = "melee "
+nome_item = "Cajado de Madeira"
+descricao = "Um cajado simples feito de uma arvore qualquer"
+metadata/_custom_type_script = "uid://36u65gug5n2e"

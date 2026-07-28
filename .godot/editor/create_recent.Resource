@@ -1,9 +1,3 @@
-ArmorData
-ShieldData
-SkillData
-StaffData
-DaggerData
-HammerData
-SwordData
-WeaponData
 ClassData
+WeaponData
+ItemData

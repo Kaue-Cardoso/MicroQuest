@@ -1,9 +1,0 @@
-res://interface/New_Game/New_Game.tscn
-res://interface/New_Game/new_game.gd
-res://interface/main_menu/menu.tscn
-res://GameScreen/intro_screen/intro_screen.tscn
-res://interface/Loaded_Game/Loaded_Game.tscn
-res://interface/Loaded_Game/loaded_game.gd
-res://Resources/Dialog/Dialog.tscn
-res://Scripts Globais/Missions.gd
-res://Resources/Player/player_data.gd

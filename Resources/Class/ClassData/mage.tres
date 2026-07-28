@@ -1,16 +1,18 @@
-[gd_resource type="Resource" script_class="ClassData" load_steps=2 format=3 uid="uid://re1cm67uvfd2"]
+[gd_resource type="Resource" script_class="ClassData" load_steps=6 format=3 uid="uid://byh6fapvjdsr5"]
 
-[ext_resource type="Script" uid="uid://cffkcxo1owqd8" path="res://Resources/Class/ClassData/class.gd" id="1_cv0ls"]
+[ext_resource type="Script" uid="uid://cffkcxo1owqd8" path="res://Resources/Class/ClassData/class.gd" id="1_04s5r"]
+[ext_resource type="Script" uid="uid://cysiau3pndx5m" path="res://Scripts/Resources/Items/item_data.gd" id="1_l0u7i"]
+[ext_resource type="Resource" uid="uid://i38wgokxti8o" path="res://Resources/Weapons/staffs/staff_wood.tres" id="2_ok5tn"]
+[ext_resource type="Texture2D" uid="uid://dgej0g1t46p7d" path="res://Resources/Class/Mage/Mage_faceset_select.png" id="2_qxq15"]
+[ext_resource type="Texture2D" uid="uid://nw52hek2ldwp" path="res://Resources/Class/Mage/Mage_faceset.png" id="3_qxq15"]
 
 [resource]
-script = ExtResource("1_cv0ls")
+script = ExtResource("1_04s5r")
 nome_classe = "Mago"
-tipo = "Magico"
-lp = 8
-mp = 16
-strength = 1
-dexterity = 1
-constitution = 1
-intelligence = 5
-charisma = 2
+descricao_lore = "Um mago Bolado"
+tipo_classe = "Magico"
+retrato = ExtResource("2_qxq15")
+retrato_off = ExtResource("3_qxq15")
+cena_personagem = "uid://sp0vfub8h5pj"
+armas_iniciais = Array[ExtResource("1_l0u7i")]([ExtResource("2_ok5tn")])
 metadata/_custom_type_script = "uid://cffkcxo1owqd8"

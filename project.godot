@@ -11,14 +11,13 @@ config_version=5
 [application]
 
 config/name="MicroQuest"
-run/main_scene="res://interface/main_menu/menu.tscn"
-config/features=PackedStringArray("4.4", "Mobile")
+run/main_scene="res://Scenes/main_menu/menu.tscn"
+config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
 MusicController="*res://Resources/Music/music_controller.tscn"
-Missions="*res://Scripts Globais/Missions.gd"
 
 [display]
 

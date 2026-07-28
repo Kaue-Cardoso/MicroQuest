@@ -1,13 +1,7 @@
-res://Scripts Globais
-res://Resources/Armor
-res://interface/New_Game
-res://Resources/Player
-res://Resources/Weapons/Shield
-res://Resources/Skill
-res://Resources/Weapons/Staff
-res://Resources/Weapons/Dagger
-res://Resources/Weapons/Hammer
-res://Resources/Weapons/Sword
+res://Scripts/interfaces/class_selector
+res://Scenes/class_selector
+res://Resources/Class/ClassData
+res://Resources/Weapons/staffs
 res://Resources/Class
 res://Resources/Weapons
 res://GameScreen/Game_Screen
@@ -17,4 +11,3 @@ res://Resources/Dialog
 res://GameScreen
 res://Assets/Fonts/equipment-pro-v1.1
 res://interface/Loaded_Game
-res://interface/main_menu

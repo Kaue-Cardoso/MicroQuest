@@ -1,16 +1,20 @@
-[gd_resource type="Resource" script_class="ClassData" load_steps=2 format=3 uid="uid://1vbbt5w12vdd"]
+[gd_resource type="Resource" script_class="ClassData" load_steps=6 format=3 uid="uid://1vbbt5w12vdd"]
 
-[ext_resource type="Script" uid="uid://cffkcxo1owqd8" path="res://Resources/Class/ClassData/class.gd" id="1_r8vkr"]
+[ext_resource type="Script" uid="uid://cysiau3pndx5m" path="res://Scripts/Resources/Items/item_data.gd" id="1_4w7ap"]
+[ext_resource type="Texture2D" uid="uid://crwaws6h6phig" path="res://Resources/Class/Knight/Knight_faceset.png" id="2_4w7ap"]
+[ext_resource type="Texture2D" uid="uid://cin8lotj1sxst" path="res://Resources/Class/Knight/Knight_faceset_select.png" id="2_g8ial"]
+[ext_resource type="Resource" uid="uid://bdjn7uaphppjn" path="res://Resources/Weapons/Swords/sword_basic.tres" id="2_ldyij"]
+[ext_resource type="Script" uid="uid://cffkcxo1owqd8" path="res://Resources/Class/ClassData/class.gd" id="3_ldyij"]
 
 [resource]
-script = ExtResource("1_r8vkr")
+script = ExtResource("3_ldyij")
 nome_classe = "Cavaleiro"
-tipo = "Fisico"
-lp = 12
-mp = 6
-strength = 4
-dexterity = 1
-constitution = 3
-intelligence = 1
-charisma = 1
+tipo_classe = "Fisico"
+retrato = ExtResource("2_g8ial")
+retrato_off = ExtResource("2_4w7ap")
+cena_personagem = "uid://cflru44inli4n"
+hp_max = 120
+mp_max = 10
+forca = 12
+armas_iniciais = Array[ExtResource("1_4w7ap")]([ExtResource("2_ldyij")])
 metadata/_custom_type_script = "uid://cffkcxo1owqd8"
