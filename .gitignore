@@ -1,0 +1,52 @@
+# Documentacao interna e instrucoes locais
+AGENTS.md
+/docs/
+/Documentos/
+
+# Godot: caches e dados gerados localmente
+/.godot/
+/.import/
+/export.cfg
+/export_credentials.cfg
+*.translation
+
+# Pastas de saida de builds e exportacoes
+/build/
+/builds/
+/dist/
+/exports/
+
+# Arquivos temporarios e backups de edicao
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+*.log
+
+# Configuracoes locais de ferramentas
+/.vscode/
+/.idea/
+/.vs/
+/.codex/
+/.agents/
+/.aws/
+
+# Variaveis de ambiente e credenciais privadas
+.env
+.env.*
+!.env.example
+!.env.sample
+*.key
+*.pem
+*.p12
+*.pfx
+*.keystore
+*.jks
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Manter .uid e .import dos assets: preservam IDs e configuracoes de importacao.

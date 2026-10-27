@@ -1,3 +1,0 @@
-ClassData
-WeaponData
-ItemData
